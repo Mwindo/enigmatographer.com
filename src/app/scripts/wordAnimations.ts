@@ -64,7 +64,7 @@ function getWagnerFischerSequence(word1: string, word2: string) {
   
 // given a set of words w1...wn, animate wi to wi+1, wi+1 to wi+2, etc.
 // animate here means perform one Levenshtein operation at a time (delete, insert, substitute)
-function animateWords(el: HTMLElement, words: string[], callback: () => void) {
+function animateWords(el: HTMLElement, words: string[], delay: number, callback: () => void) {
   let call = callback || (() => {});
   let a = words[0];
   let b = words[1];
@@ -72,15 +72,15 @@ function animateWords(el: HTMLElement, words: string[], callback: () => void) {
   let index = 0;
   function animate() {
     if (seq[index] != null) {
-      el.innerHTML = seq[index];
+      el.innerText = seq[index];
       index += 1;
       setTimeout(function () {
         animate();
       }, 50);
     } else if (words.length > 2) {
       setTimeout(function () {
-        animateWords(el, words.slice(1), call);
-      }, 60);
+        animateWords(el, words.slice(1), delay, call);
+      }, delay);
     } else {
       call();
     }
@@ -88,12 +88,11 @@ function animateWords(el: HTMLElement, words: string[], callback: () => void) {
   animate();
 }
 
-export function shuffleString(element: HTMLElement, word: string) {
-  const oldOnclick = element.onclick;
-  element.onclick = null;
+export function shuffleString(element: HTMLElement, word: string, delay: number, callback: () => void) {
   animateWords(
     element,
-    [element.innerHTML, word, word, word, element.innerHTML],
-    () => (element.onclick = oldOnclick)
+    [element.innerText, word, word, word, element.innerText],
+    delay,
+    callback
   );
 }

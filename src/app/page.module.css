@@ -5,12 +5,12 @@
 
 .grid_container {
   display: grid;
-  grid-template-columns: 25% 75%; /* 30% for left panel and 70% for right panel */
+  grid-template-columns: 25% 6px 75%; /* 30% for left panel and 70% for right panel */
   grid-template-rows: auto 1fr; /* Dynamic height for content and 100px for footer */
   grid-template-areas:
-      "left header"
-      "left main"
-      "footer footer"; /* Footer spans across both columns */
+      "left dragbar header"
+      "left dragbar main"
+      "footer footer footer"; /* Footer spans across both columns */
   min-height: 100vh; /* Make the grid container fill the full viewport height */
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .right_panel_main {
@@ -47,4 +48,21 @@
   text-align: center;
   align-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dragbar {
+  background-color: black;
+  display: flex;
+  /* border: 2px dotted gray; */
+  grid-area: dragbar;
+  cursor: ew-resize;
+  height:100%;
+  align-items: center;
+}
+
+.dragicon {
+  background-color: gray;
+  border-radius: 25%;
+  height: 20px;
+  width: 6px;
 }
