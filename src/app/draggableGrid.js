@@ -1,10 +1,12 @@
+// Modification of the code here https://stackoverflow.com/a/57426239
+// TODO: TypeScript, make more flexible
+
 let isSidebarDragging = false;
 
 export const DRAG_RESIZE_EVENT_NAME = "drag-resize";
 
 export function ResetColumnSizes() {
   // when page resizes return to default col sizes
-  console.log("HELLO");
   let page = document.getElementById("page-wrapper");
   page.style.gridTemplateColumns = "25% 6px 75%";
 }
