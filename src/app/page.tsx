@@ -58,7 +58,7 @@ export default function Home() {
           <ResponsiveText
             textOptions={[
               { text: "Chris", breakpoint: 600 },
-              { text: "Christopher", breakpoint: -1 },
+              { text: "Christopher", breakpoint: 1000 },
             ]}
             permutationOptions={{ options: firstNamePermutations, delay: 180 }}
           />

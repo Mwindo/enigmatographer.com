@@ -13,15 +13,16 @@ interface PermutationOptions {
 }
 
 const getCurrentText = (textOptions: TextOption[], innerWidth: number) => {
+  // Sort textOptions ascending by breakpoint
   textOptions.sort(
-    (a: TextOption, b: TextOption) => b.breakpoint - a.breakpoint
+    (a: TextOption, b: TextOption) => a.breakpoint - b.breakpoint
   );
   for (const option of textOptions) {
     if (innerWidth < option.breakpoint) {
-      return option.text;
+      return option.text; // Get the text for the first breakpoint smaller than the innerWidth
     }
   }
-  return textOptions.slice(-1)[0].text;
+  return textOptions.slice(-1)[0].text; // Otherwise, return the longest text
 };
 
 const ResponsiveText = ({
@@ -29,12 +30,13 @@ const ResponsiveText = ({
   permutationOptions = null,
 }: {
   textOptions: TextOption[];
-  permutationOptions?: PermutationOptions | null; // TODO: Add checks that the passed breakpoints make sense
+  permutationOptions?: PermutationOptions | null;
 }) => {
   const [text, setText] = useState(
     getCurrentText(textOptions, window.innerWidth)
   );
 
+  // TODO: Improve this so it isn't coupled to the main page ID
   useEffect(() => {
     const handleResize = () => {
       console.log(
