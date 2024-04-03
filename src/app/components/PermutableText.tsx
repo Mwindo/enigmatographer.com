@@ -1,23 +1,38 @@
-import { ReactNode } from "react";
+import { useState } from "react";
 import { shuffleString } from "../scripts/wordAnimations";
-import styles from './PermutableText.module.css';
+import styles from "./PermutableText.module.css";
 
 interface PermutableTextProps {
-  startText: string;
+  text: string;
   options: string[];
+  delay?: number;
 }
 
-const PermutableText = ({
-  startText,
-  options,
-}: PermutableTextProps) => (
-  <div
-    id={`permute_${startText}`}
-    className={styles.permutable_text_container}
-    onClick={() => shuffleString(document.getElementById(`permute_${startText}`)!, "test")}
-  >
-    {startText}
-  </div>
-);
+const PermutableText = ({ text, options, delay = 60 }: PermutableTextProps) => {
+  const id: string = self.crypto.randomUUID();
+
+  const [isPermuting, setIsPermuting] = useState<Boolean>(false);
+
+  const handleClick = () => {
+    if (isPermuting) return; // Don't try to permute the text while already permuting or it could get garbled
+    setIsPermuting(true);
+    shuffleString(
+      document.getElementById(id)!,
+      options[Math.floor(Math.random() * options.length)],
+      delay,
+      () => setIsPermuting(false)
+    );
+  };
+
+  return (
+    <div
+      id={id}
+      className={styles.permutable_text_container}
+      onClick={handleClick}
+    >
+      {text}
+    </div>
+  );
+};
 
 export default PermutableText;
