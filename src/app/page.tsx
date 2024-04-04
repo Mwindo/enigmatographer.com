@@ -1,24 +1,28 @@
 "use client";
-
-import Image from "next/image";
-import styles from "./page.module.css";
-import { useEffect } from "react";
-import SideBar from "./components/Sidebar"
-import PermutableText from "./components/PermutableText";
+import { usePathname } from 'next/navigation'
+import { ReactNode, useEffect, useState } from "react";
 
 export default function Home() {
+  const path = usePathname();
+  console.log(path);
+  const [ContentComponent, setContentComponent] = useState<any>(null);
 
-  return (
-    <main className={styles.main}>
-      <div className={styles.grid_container}>
-          <div className={styles.left_panel}><SideBar /></div>
-          <div className={styles.right_panel_header}>
-            <PermutableText startText="Christopher" options={[""]}></PermutableText>
-            <PermutableText startText="Bisom" options={[""]}></PermutableText>
-          </div>
-          <div className={styles.right_panel_main}></div>
-          <div className={styles.footer}>2024</div>
-      </div>
-    </main>
-  );
+  useEffect(() => {
+    if (path) {
+      const loadComponent = async () => {
+        try {
+          // Assume a naming convention where the component for the project can be dynamically imported
+          const component = null; //await dynamic(() => import(`${path}`));
+          setContentComponent(component);
+        } catch (err) {
+          console.log('Failed to load the component', err);
+          // Handle the error or load a default/fallback component
+        }
+      };
+
+      loadComponent();
+    }
+  }, [location]);
+
+  return <>{ContentComponent ? ContentComponent : <div></div>}</>
 }

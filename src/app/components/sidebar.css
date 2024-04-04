@@ -14,8 +14,13 @@
   .basic .tree-node__leaf {
     outline: none;
   }
-  
+
   .basic .tree-node--focused {
+    font-weight: bold;
+    display: block;
+  }
+  
+  .basic .tree-node--selected {
     /* outline-color: rgb(77, 144, 254);
     outline-style: auto;
     outline-width: 2px; */
