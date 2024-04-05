@@ -8,7 +8,7 @@ export default function Software() {
         As of right now (2024), I do most of my backend programming in Python,
         although I have extensive experience with .NET and some experience with C
         and PHP. Most of my frontend work is in JavaScript/TypeScript, either
-        with or without React. I'm currently getting into more machine learning
+        with or without React. I am currently getting into more machine learning
         with PyTorch. Stay tuned!
       </p>
     </DirectoryPageWrapper>
