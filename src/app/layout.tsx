@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import PageLayout from "./pagelayout";
+import { Suspense } from "react";
+import Loading from "./loading";
 
-const myFont = localFont({ src: '../fonts/lansbury-fg.regular.ttf' })
+const myFont = localFont({ src: "../fonts/lansbury-fg.regular.ttf" });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="body" className={myFont.className}><PageLayout>{children}</PageLayout></body>
+      <Suspense fallback={<Loading />}>
+      <body id="body" className={myFont.className}>
+        <PageLayout>
+          {children}
+        </PageLayout>
+      </body>
+      </Suspense>
     </html>
   );
 }

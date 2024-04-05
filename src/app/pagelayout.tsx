@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import styles from "./pagelayout.module.css";
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import SideBar from "./components/Sidebar";
 import PermutableText from "./components/PermutableText";
 import {
@@ -11,11 +11,26 @@ import {
   ResetColumnSizes,
 } from "./draggableGrid.js";
 import ResponsiveText from "./components/ResponsiveText";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
-export default function PageLayout({children}: {children?: ReactNode}) {
+export default function PageLayout({ children }: { children?: ReactNode }) {
   useEffect(() => {
-    window.onresize = ResetColumnSizes;
+    window.onresize = () => {
+      ResetColumnSizes();
+      if (window.innerWidth > 600) {
+        setShowSidebarOverlay(true);
+      }
+    };
   }, []);
+
+  const [showSidebarOverlay, setShowSidebarOverlay] = useState(true);
+
+  const getSidebarClass = () => {
+    return showSidebarOverlay ? styles.left_panel : styles.invisible;
+  };
+
+  const location = usePathname();
 
   const firstNamePermutations: string[] = [
     "First Name",
@@ -43,8 +58,11 @@ export default function PageLayout({children}: {children?: ReactNode}) {
         onMouseUp={EndDrag}
         onMouseMove={(e) => OnDrag(e)}
       >
-        <div id="left-panel" className={styles.left_panel}>
-          <SideBar />
+        <div id="left-panel" className={getSidebarClass()}>
+          <SideBar
+            selectedPath={location}
+            handleClose={() => setShowSidebarOverlay(!showSidebarOverlay)}
+          />
         </div>
         <div
           id="dragbar"
@@ -54,6 +72,14 @@ export default function PageLayout({children}: {children?: ReactNode}) {
           <div className={styles.dragicon}></div>
         </div>
         <div id="right-panel-header" className={styles.right_panel_header}>
+          <Image
+            className={styles.sidebar_icon}
+            onClick={() => setShowSidebarOverlay(true)}
+            src="sidebar-icon.svg"
+            width={32}
+            height={32}
+            alt="Open sidebar"
+          ></Image>
           <ResponsiveText
             textOptions={[
               { text: "Chris", breakpoint: 600 },
@@ -67,9 +93,7 @@ export default function PageLayout({children}: {children?: ReactNode}) {
             options={lastNamePermutations}
           />
         </div>
-        <div className={styles.right_panel_main}>
-            {children}
-        </div>
+        <div className={styles.right_panel_main}>{children}</div>
         <div className={styles.footer}>
           <a href="https://github.com/Mwindo" target="_blank">
             https://github.com/Mwindo

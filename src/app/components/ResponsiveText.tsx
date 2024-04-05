@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import PermutableText from "./PermutableText";
 import { DRAG_RESIZE_EVENT_NAME } from "../draggableGrid";
@@ -32,17 +34,11 @@ const ResponsiveText = ({
   textOptions: TextOption[];
   permutationOptions?: PermutationOptions | null;
 }) => {
-  const [text, setText] = useState(
-    getCurrentText(textOptions, window.innerWidth)
-  );
+  const [text, setText] = useState<string>(textOptions.slice(-1)[0].text);
 
   // TODO: Improve this so it isn't coupled to the main page ID
   useEffect(() => {
     const handleResize = () => {
-      console.log(
-        window.innerWidth -
-          (document.getElementById("left-panel")?.clientWidth || 0)
-      );
       setText(
         getCurrentText(
           textOptions,
@@ -51,7 +47,7 @@ const ResponsiveText = ({
         )
       );
     };
-
+    handleResize();
     window.addEventListener("resize", handleResize);
     window.addEventListener(DRAG_RESIZE_EVENT_NAME, handleResize);
     return () => {

@@ -35,7 +35,7 @@
   }
 
   .basic .tree-node:hover {
-    background-color: slateblue;
+    background-color: rgb(43, 54, 61);
   }
   
   .basic .tree-node {

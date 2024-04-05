@@ -1,5 +1,9 @@
-import Link from "next/link";
-export default function Projects() {
+import DirectoryPageWrapper from "@/app/components/DirectoryPageWrapper";
 
-  return <><>CURRENTLY READING</><Link href="/">Home</Link></>;
+export default function CurrentlyReading() {
+  return (
+    <DirectoryPageWrapper header="Currently Reading">
+      <p>Fill this in!</p>
+    </DirectoryPageWrapper>
+  );
 }
