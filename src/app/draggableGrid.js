@@ -8,7 +8,11 @@ export const DRAG_RESIZE_EVENT_NAME = "drag-resize";
 export function ResetColumnSizes() {
   // when page resizes return to default col sizes
   let page = document.getElementById("page-wrapper");
-  page.style.gridTemplateColumns = "25% 6px 75%";
+  if (page.clientWidth >= 600) {
+    page.style.gridTemplateColumns = "22% 6px 78%";
+  } else {
+    page.style.gridTemplateColumns = "0% 0px 100%";
+  }
 }
 
 function SetCursor(cursor) {

@@ -1,0 +1,26 @@
+@media (min-width: 600px) {
+    .close_container {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .close_container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: .25rem;
+        margin-top: -.75rem;
+        cursor: pointer;
+    }
+
+    .close_button {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close_button:hover {
+        color:gray;
+    }
+}
