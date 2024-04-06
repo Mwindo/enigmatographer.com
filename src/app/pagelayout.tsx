@@ -68,7 +68,7 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
         onMouseUp={EndDrag}
         onMouseLeave={EndDrag}
         onTouchMove={(e) => OnDrag(e)}
-        onTouchEnd={(e) => OnDrag(e)}
+        onTouchEnd={EndDrag}
         onTouchCancel={EndDrag}
       >
         <div id="left-panel" className={getSidebarClass()}>
