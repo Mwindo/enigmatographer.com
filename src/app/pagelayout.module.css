@@ -16,7 +16,7 @@
   }
 
   .sidebar_icon {
-    visibility: hidden;
+    display: none;
   }
 
   .left_panel {

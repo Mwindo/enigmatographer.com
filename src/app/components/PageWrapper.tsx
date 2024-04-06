@@ -1,10 +1,13 @@
 import styles from "./PageWrapper.module.css";
 import { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface PageWrapperProps {
   header: string;
   headerLinkURL?: string;
+  headerIcon?: string;
+  headerIconSize?: number;
   children: ReactNode;
   backgroundColor?: string;
 }
@@ -12,19 +15,36 @@ export interface PageWrapperProps {
 export default function PageWrapper({
   header,
   headerLinkURL,
+  headerIcon,
+  headerIconSize = 64,
   children,
   backgroundColor = "rgb(40, 43, 48)",
 }: PageWrapperProps) {
   return (
     <div className={styles.page} style={{ backgroundColor: backgroundColor }}>
-      <Link className={styles.close} href="/">✖</Link>
-      {headerLinkURL ? (
-        <Link href={headerLinkURL} target="_blank">
-          <h1 className={styles.h1}>{header}</h1>
+      <div className={styles.close_container}>
+        <Link className={styles.close_button} href="/">
+          ✖
         </Link>
-      ) : (
-        <h1 className={styles.h1}>{header}</h1>
-      )}
+      </div>
+      <div className={styles.header}>
+        {headerIcon && (
+          <Image
+            className={styles.icon}
+            src={headerIcon}
+            width={headerIconSize}
+            height={headerIconSize}
+            alt="Sherlock Chick"
+          ></Image>
+        )}
+        {headerLinkURL ? (
+          <Link className={styles.link} href={headerLinkURL} target="_blank">
+            <h1 className={styles.h1}>{header}</h1>
+          </Link>
+        ) : (
+          <h1 className={styles.h1}>{header}</h1>
+        )}
+      </div>
       <section>{children}</section>
     </div>
   );

@@ -1,7 +1,9 @@
 .page {
     height: 100%;
     padding: 1rem;
+    padding-top: 0rem;
     padding-left: 2rem;
+    padding-right: 2rem;
     font-family: 'Courier New', Courier, monospace;
     color: gray;
 }
@@ -11,12 +13,36 @@
     padding-bottom: 1rem;
 }
 
-.close {
-    right: 1rem;
-    font-size: 2rem;
-    position: absolute;
+.close_container {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.close:hover {
+.close_button {
+    font-size: 2rem;
+}
+
+.close_button:hover {
     opacity: .5;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: white;
+}
+
+.icon {
+    border: 2px solid black;
+    border-radius: 3rem;
+    margin-top: -1rem;
+}
+
+.header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
 }

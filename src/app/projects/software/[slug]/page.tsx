@@ -1,10 +1,28 @@
-"use client"
+"use client";
 import PageWrapper from "@/app/components/PageWrapper";
 import { usePathname } from "next/navigation";
+import Enigmatographer from "../pages/Enigmatographer";
+import WordTrain from "../pages/WordTrain";
+import Commonplace from "../pages/Commonplace";
 export default function SoftwareProject() {
   const path = usePathname();
-  let dummyBackground: string = "rgb(50, 50, 80)";
-  if (path.includes("this-site")) dummyBackground = "rgb(50, 60, 70)";
-  if (path.includes("commonplace")) dummyBackground = "rgb(60, 50, 70)";
-  return <PageWrapper header="Project Name" headerLinkURL="https://github.com/Mwindo" backgroundColor={dummyBackground}><p>Project content</p></PageWrapper>
+  if (path.includes("this-site")) {
+    return <Enigmatographer></Enigmatographer>
+  }
+  if (path.includes("word-train")) {
+    return <WordTrain></WordTrain>
+  }
+  if (path.includes("commonplace")) {
+    return <Commonplace></Commonplace>
+  }
+
+
+  return (
+    <PageWrapper
+      header="Project Not Found"
+      headerLinkURL="/"
+    >
+      {"No project info :("}
+    </PageWrapper>
+  );
 }
