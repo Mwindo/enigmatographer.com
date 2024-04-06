@@ -36,10 +36,16 @@ const folder = {
             { name: "projects/music/untitled-in-f-minor" },
           ],
         },
+        {
+          name: "projects/lists",
+        }
       ],
     },
     {
       name: "currently-reading",
+    },
+    {
+      name: "contact",
     },
   ],
 };

@@ -22,6 +22,9 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
         setShowSidebarOverlay(true);
       }
     };
+    if (window.innerWidth <= 600) {
+      setShowSidebarOverlay(false);
+    }
   }, []);
 
   const [showSidebarOverlay, setShowSidebarOverlay] = useState(true);

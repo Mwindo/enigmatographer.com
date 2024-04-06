@@ -1,0 +1,1 @@
+The content of these files should be moved to a db and fetched dynamically.
