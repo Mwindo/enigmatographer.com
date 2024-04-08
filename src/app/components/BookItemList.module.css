@@ -1,5 +1,5 @@
 .book_item_list {
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

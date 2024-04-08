@@ -12,8 +12,8 @@ export default function WordTrain() {
       <h3>Motivation</h3>
       <p>
         I had a game called Word Train as a child, and I recently wondered how
-        solvable it was for given lexicons (since the solvability of the game
-        is inherently dependent on the words allowed). This seemed like a cute
+        solvable it was for given lexicons (since the solvability of the game is
+        inherently dependent on the words allowed). This seemed like a cute
         project. It also seemed like a project that was easy enough to do a lot
         with quickly, but which had room to expand indefinitely, e.g., training
         models, investigating lexicons with interesting properties related to

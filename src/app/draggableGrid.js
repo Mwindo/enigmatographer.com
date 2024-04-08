@@ -46,7 +46,9 @@ export function OnDrag(event) {
     if (event.type == "mousemove") {
       leftColWidth = isSidebarDragging ? event.clientX : leftcol.clientWidth;
     } else if (event.type == "touchmove") {
-      leftColWidth = isSidebarDragging ? event.touches[0].clientX : leftcol.clientWidth;
+      leftColWidth = isSidebarDragging
+        ? event.touches[0].clientX
+        : leftcol.clientWidth;
     }
     leftColWidth = Math.max(leftColWidth, 50);
     leftColWidth = Math.min(leftColWidth, page.clientWidth - 200);

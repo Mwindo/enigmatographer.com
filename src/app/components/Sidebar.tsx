@@ -38,7 +38,7 @@ const folder = {
         },
         {
           name: "projects/lists",
-        }
+        },
       ],
     },
     {
@@ -77,7 +77,9 @@ const SideBar = ({
   return (
     <div>
       <div className={styles.close_container}>
-        <button className={styles.close_button} onClick={handleClose}>✖</button>
+        <button className={styles.close_button} onClick={handleClose}>
+          ✖
+        </button>
       </div>
       <TreeView
         data={data}

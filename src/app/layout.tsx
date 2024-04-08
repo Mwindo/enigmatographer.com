@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
-import localFont from "next/font/local";
 import PageLayout from "./pagelayout";
 import { Suspense } from "react";
 import Loading from "./loading";
 
-const myFont = localFont({ src: "../fonts/lansbury-fg.regular.ttf" });
-
-const inter = Inter({ subsets: ["latin"] });
+const mainFont = Titillium_Web({
+  subsets: ["latin"],
+  variable: "--font-main",
+  display: "swap",
+  weight: "200",
+});
 
 export const metadata: Metadata = {
   title: "Enigmatographer",
@@ -23,11 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Suspense fallback={<Loading />}>
-      <body id="body" className={myFont.className}>
-        <PageLayout>
-          {children}
-        </PageLayout>
-      </body>
+        <body id="body" className={mainFont.className}>
+          <PageLayout>{children}</PageLayout>
+        </body>
       </Suspense>
     </html>
   );

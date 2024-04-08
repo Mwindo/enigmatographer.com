@@ -9,7 +9,6 @@ interface PermutableTextProps {
 }
 
 const PermutableText = ({ text, options, delay = 60 }: PermutableTextProps) => {
-
   const [isPermuting, setIsPermuting] = useState<Boolean>(false);
 
   const handleClick: MouseEventHandler = (e) => {
@@ -24,10 +23,7 @@ const PermutableText = ({ text, options, delay = 60 }: PermutableTextProps) => {
   };
 
   return (
-    <div
-      className={styles.permutable_text_container}
-      onClick={handleClick}
-    >
+    <div className={styles.permutable_text_container} onClick={handleClick}>
       {text}
     </div>
   );

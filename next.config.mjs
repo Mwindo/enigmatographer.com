@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["m.media-amazon.com", "mit-press-us.imgix.net"],
+    domains: ["m.media-amazon.com", "bisom-bucket.s3.us-east-2.amazonaws.com"],
   },
 };
 

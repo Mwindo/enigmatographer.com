@@ -1,17 +1,17 @@
 .main {
-  height: 100vh;
   background-color: black;
+  height: 100vh;
 }
 
 @media (min-width: 600px) {
   .grid_container {
     display: grid;
-    grid-template-columns: 22% 6px 78%; /* 30% for left panel and 70% for right panel */
-    grid-template-rows: 50px 1fr 50px; /* Dynamic height for content and 100px for footer */
     grid-template-areas:
       "left dragbar header"
       "left dragbar main"
       "footer footer footer"; /* Footer spans across both columns */
+    grid-template-columns: 22% 6px 78%; /* 30% for left panel and 70% for right panel */
+    grid-template-rows: 50px 1fr 50px; /* Dynamic height for content and 100px for footer */
     min-height: 100vh; /* Make the grid container fill the full viewport height */
   }
 
@@ -20,74 +20,69 @@
   }
 
   .left_panel {
-    grid-area: left;
     background: rgb(32, 40, 45);
+    grid-area: left;
+    font-size: 1.5rem;
+    overflow: scroll;
     padding-left: 1rem;
     padding-top: 1rem;
-    font-size: 1.5rem;
-    font-family: "Courier New", Courier, monospace;
-    overflow: scroll;
   }
-
 }
 
 @media (max-width: 600px) {
   .grid_container {
     display: grid;
-    grid-template-columns: 0% 0px 100%; /* 30% for left panel and 70% for right panel */
-    grid-template-rows: 50px 1fr 50px; /* Dynamic height for content and 100px for footer */
     grid-template-areas:
       "left dragbar header"
       "left dragbar main"
       "footer footer footer"; /* Footer spans across both columns */
+    grid-template-columns: 0% 0px 100%; /* 30% for left panel and 70% for right panel */
+    grid-template-rows: 50px 1fr 50px; /* Dynamic height for content and 100px for footer */
     min-height: 100vh; /* Make the grid container fill the full viewport height */
   }
 
   .sidebar_icon {
-    visibility: visible;
     cursor: pointer;
     left: 1rem;
-    top: .5rem;
     position: absolute;
+    top: 0.5rem;
+    visibility: visible;
   }
 
   .left_panel {
     background: rgb(32, 40, 45);
-    padding-left: 1rem;
-    padding-top: 1rem;
-    padding-right: .5rem;
-    font-size: 1.5rem;
-    font-family: "Courier New", Courier, monospace;
-    overflow: scroll;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    transition: .25s;
-    z-index: 100;
     box-shadow: 5px 5px 20px rgb(23, 29, 33);
+    font-size: 1.5rem;
+    height: 100%;
+    left: 0;
+    overflow: scroll;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    position: absolute;
+    transition: 0.25s;
+    z-index: 100;
   }
-
 }
 
 .invisible {
   height: 100%;
   opacity: 0;
-  font-family: "Courier New", Courier, monospace;
-  visibility: hidden;
   position: absolute;
-  transition: .25s;
+  transition: 0.25s;
+  visibility: hidden;
 }
 
 .right_panel_header {
-  grid-area: header;
-  text-align: center;
-  border-bottom: 1px solid black;
-  font-size: 3rem;
   background: rgb(32, 40, 45);
+  border-bottom: 1px solid black;
   display: flex;
-  justify-content: center;
+  font-size: 3rem;
   gap: 1rem;
+  grid-area: header;
+  justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
 .right_panel_header div:hover {
@@ -95,25 +90,24 @@
 }
 
 .right_panel_main {
-  grid-area: main;
   background-color: rgb(35, 35, 38);
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
   font-size: 1.2rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  grid-area: main;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
 }
 
 .footer {
-  grid-area: footer;
-  display: flex;
-  height: 40px; /* Fixed height for the footer */
+  align-items: center;
   background: rgb(32, 40, 45);
   border-top: 1px solid black;
   color: rgb(156, 156, 164);
-  font-size: 1rem;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  grid-area: footer;
+  height: 40px; /* Fixed height for the footer */
+  justify-content: center;
 }
 
 .footer a:hover {
@@ -121,13 +115,13 @@
 }
 
 .dragbar {
+  align-items: center;
   background-color: rgb(29, 29, 29);
+  cursor: ew-resize;
   display: flex;
   /* border: 2px dotted gray; */
   grid-area: dragbar;
-  cursor: ew-resize;
   height: 100%;
-  align-items: center;
 }
 
 .dragicon {

@@ -13,6 +13,12 @@ import {
 import ResponsiveText from "./components/ResponsiveText";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const headerFont = localFont({
+  src: "../fonts/lansbury-fg.regular.ttf",
+  variable: "--font-lansbury",
+});
 
 export default function PageLayout({ children }: { children?: ReactNode }) {
   useEffect(() => {
@@ -37,7 +43,7 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
     if (window.innerWidth <= 600) {
       setShowSidebarOverlay(false);
     }
-  }
+  };
 
   const location = usePathname();
 
@@ -81,11 +87,17 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
           id="dragbar"
           className={styles.dragbar}
           onMouseDown={StartLeftDrag}
-          onTouchStart={() => {StartLeftDrag(); console.log('started')}}
+          onTouchStart={() => {
+            StartLeftDrag();
+            console.log("started");
+          }}
         >
           <div className={styles.dragicon}></div>
         </div>
-        <div id="right-panel-header" className={styles.right_panel_header}>
+        <div
+          id="right-panel-header"
+          className={`${styles.right_panel_header} ${headerFont.className}`}
+        >
           <Image
             className={styles.sidebar_icon}
             onClick={() => setShowSidebarOverlay(true)}
@@ -107,7 +119,12 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
             options={lastNamePermutations}
           />
         </div>
-        <div onClick={() => handleMainContentClicked()} className={styles.right_panel_main}>{children}</div>
+        <div
+          onClick={() => handleMainContentClicked()}
+          className={styles.right_panel_main}
+        >
+          {children}
+        </div>
         <div className={styles.footer}>
           <a href="https://github.com/Mwindo" target="_blank">
             https://github.com/Mwindo

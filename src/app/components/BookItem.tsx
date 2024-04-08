@@ -21,9 +21,7 @@ export default function BookItem({
 }: BookItemProps) {
   return (
     <section className={styles.item_wrapper}>
-      <div
-        className={styles.container}
-      >
+      <div className={styles.container}>
         <div className={styles.left_panel_wrapper}>
           <Link href={url} target="_blank">
             <Image

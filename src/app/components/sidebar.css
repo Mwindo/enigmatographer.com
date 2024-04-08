@@ -16,22 +16,22 @@
   }
 
   .basic .tree-node--focused {
-    font-weight: bold;
     display: block;
+    font-weight: bold;
   }
   
   .basic .tree-node--selected {
     /* outline-color: rgb(77, 144, 254);
     outline-style: auto;
     outline-width: 2px; */
-    display: block;
     color: yellow;
+    display: block;
   }
   
   .basic .tree-node__branch {
     display: block;
-    text-decoration: underline;
     padding: 0;
+    text-decoration: underline;
   }
 
   .basic .tree-node:hover {

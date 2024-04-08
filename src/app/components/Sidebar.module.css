@@ -1,26 +1,26 @@
 @media (min-width: 600px) {
-    .close_container {
-        display: none;
-    }
+  .close_container {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
-    .close_container {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: .25rem;
-        margin-top: -.75rem;
-        cursor: pointer;
-    }
+  .close_container {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.25rem;
+    margin-top: -0.75rem;
+  }
 
-    .close_button {
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
+  .close_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
 
-    .close_button:hover {
-        color:gray;
-    }
+  .close_button:hover {
+    color: gray;
+  }
 }
