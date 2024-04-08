@@ -8,6 +8,8 @@ export interface PageWrapperProps {
   headerLinkURL?: string;
   headerIcon?: string;
   headerIconSize?: number;
+  headerIconAlt?: string;
+  headerIconCitation?: string;
   children: ReactNode;
   backgroundColor?: string;
 }
@@ -17,6 +19,8 @@ export default function PageWrapper({
   headerLinkURL,
   headerIcon,
   headerIconSize = 64,
+  headerIconAlt,
+  headerIconCitation,
   children,
   backgroundColor = "rgb(40, 43, 48)",
 }: PageWrapperProps) {
@@ -30,11 +34,12 @@ export default function PageWrapper({
       <div className={styles.header}>
         {headerIcon && (
           <Image
+            alt={`${headerIconAlt}`}
             className={styles.icon}
-            src={headerIcon}
-            width={headerIconSize}
             height={headerIconSize}
-            alt="Sherlock Chick"
+            src={headerIcon}
+            title={headerIconCitation}
+            width={headerIconSize}
           ></Image>
         )}
         {headerLinkURL ? (

@@ -1,8 +1,12 @@
-import DirectoryPageWrapper from "@/app/components/DirectoryPageWrapper";
+import PageWrapper from "@/app/components/PageWrapper";
 
 export default function Music() {
   return (
-    <DirectoryPageWrapper header="Music Projects">
+    <PageWrapper
+      header="Music Projects"
+      headerIcon="/piano1.png"
+      headerIconAlt="Piano image"
+    >
       <p>
         I enjoy playing the piano. I have little formal training, which means my
         sight reading is atrocious and transcribing compositions is slow and
@@ -14,6 +18,6 @@ export default function Music() {
         individual music project pages. My hope is to upload scores (and maybe
         better recording quality) in the not-too-distant-future.
       </p>
-    </DirectoryPageWrapper>
+    </PageWrapper>
   );
 }

@@ -1,20 +1,28 @@
-import DirectoryPageWrapper from "@/app/components/DirectoryPageWrapper";
+import PageWrapper from "@/app/components/PageWrapper";
 
 export default function Software() {
   return (
-    <DirectoryPageWrapper header="Software Projects">
-      <p>This directory contains a handful of personal software projects.</p>
-      <p>
-        As of right now (2024), I do most of my backend programming in Python,
-        although I have extensive experience with .NET and some experience with
-        C and PHP. Most of my frontend work is in JavaScript/TypeScript, either
-        with or without React. I am currently getting into more machine learning
-        with PyTorch. Stay tuned!
-      </p>
-      <p>
-        Each page contains some information on the project as well as any
-        relevant links.
-      </p>
-    </DirectoryPageWrapper>
+    <PageWrapper
+      header="Software Projects"
+      headerIcon="/code.png"
+      headerIconAlt="Image of python3 code"
+    >
+      <section>
+        <p>This directory contains a handful of personal software projects.</p>
+        <br />
+        <p>
+          As of right now (2024), I do most of my backend programming in Python,
+          although I have extensive experience with .NET and some experience
+          with C and PHP. Most of my frontend work is in JavaScript/TypeScript,
+          either with or without React. I am currently getting into more machine
+          learning with PyTorch. Stay tuned!
+        </p>
+        <br />
+        <p>
+          Each page contains some information on the project as well as any
+          relevant links.
+        </p>
+      </section>
+    </PageWrapper>
   );
 }

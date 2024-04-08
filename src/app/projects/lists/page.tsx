@@ -1,9 +1,14 @@
-import DirectoryPageWrapper from "@/app/components/DirectoryPageWrapper";
+import PageWrapper from "@/app/components/PageWrapper";
 
 export default function Lists() {
   return (
-    <DirectoryPageWrapper header="Lists Project">
+    <PageWrapper
+      header="Lists Project"
+      headerIcon="/loading_clock.svg"
+      headerIconAlt="Coming Soon image"
+      headerIconCitation="https://www.onlinewebfonts.com/icon/507890"
+    >
       <h3>Coming soon! Maybe!</h3>
-    </DirectoryPageWrapper>
+    </PageWrapper>
   );
 }

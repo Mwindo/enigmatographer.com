@@ -1,11 +1,16 @@
 import PageWrapper from "@/app/components/PageWrapper";
-import styles from "../../../components/PageWrapper.module.css";
 import BookItem from "../components/BookItem";
 import BookItemList from "../components/BookItemList";
 
 export default function Commonplace() {
   return (
-    <PageWrapper header="Currently Reading" headerLinkURL="">
+    <PageWrapper
+      header="Currently Reading"
+      headerLinkURL=""
+      headerIcon="/la-vie.png"
+      headerIconAlt="Book icon"
+      headerIconCitation="https://www.livredepoche.com/livre/la-vie-mode-demploi-9782253023906"
+    >
       <BookItemList>
         <p>
           I love to read. I am always reading, generally multiple things
@@ -52,14 +57,15 @@ export default function Commonplace() {
           In the introduction, Jacques Voisine writes, &quot;Dans ce dernier
           chef-d&apos;œuvre brûle le farouche orgueil du Rousseau de toujours,
           hanté par la crainte qu&apos;on puisse confondre avec le reste des
-          hommes&quot; (&quot;In this last masterpiece, as always, burns the fierce pride
-          of Rousseau, haunted by the fear that one might conflate him with the
-          rest of mankind&quot;). This is spot on. Rousseau is a fantastic writer--I
-          think his masterful use of parallelism and antithesis has something to
-          do with it--but reading him now, I can&apos;t help but notice how
-          overbearing he must have been! Everywhere he takes pains to note just
-          how exceptional he is--in suffering, in honesty, in humility, in
-          serenity. It reminds me a bit of Cicero, but a little whinier.
+          hommes&quot; (&quot;In this last masterpiece, as always, burns the
+          fierce pride of Rousseau, haunted by the fear that one might conflate
+          him with the rest of mankind&quot;). This is spot on. Rousseau is a
+          fantastic writer--I think his masterful use of parallelism and
+          antithesis has something to do with it--but reading him now, I
+          can&apos;t help but notice how overbearing he must have been!
+          Everywhere he takes pains to note just how exceptional he is--in
+          suffering, in honesty, in humility, in serenity. It reminds me a bit
+          of Cicero, but a little whinier.
         </BookItem>
       </BookItemList>
     </PageWrapper>
