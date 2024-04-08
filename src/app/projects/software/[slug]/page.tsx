@@ -7,21 +7,17 @@ import Commonplace from "../pages/Commonplace";
 export default function SoftwareProject() {
   const path = usePathname();
   if (path.includes("this-site")) {
-    return <Enigmatographer></Enigmatographer>
+    return <Enigmatographer></Enigmatographer>;
   }
   if (path.includes("word-train")) {
-    return <WordTrain></WordTrain>
+    return <WordTrain></WordTrain>;
   }
   if (path.includes("commonplace")) {
-    return <Commonplace></Commonplace>
+    return <Commonplace></Commonplace>;
   }
 
-
   return (
-    <PageWrapper
-      header="Project Not Found"
-      headerLinkURL="/"
-    >
+    <PageWrapper header="Project Not Found" headerLinkURL="/">
       {"No project info :("}
     </PageWrapper>
   );

@@ -12,12 +12,13 @@ export default function Commonplace() {
       <h3>Motivation</h3>
       <p>
         I wanted a blog, of sorts, and I wanted to design it myself. I often
-        find myself impressed by &quot;little ingenuities,&quot; like a clever turn or
-        phrase or an elegant mathematical substitution, and I wanted a place to document
-        these easy-to-forget moments.
+        find myself impressed by &quot;little ingenuities,&quot; like a clever
+        turn or phrase or an elegant mathematical substitution, and I wanted a
+        place to document these easy-to-forget moments.
       </p>
       <p>
-        I am putting some finishing touches on it before sharing the deployed version.
+        I am putting some finishing touches on it before sharing the deployed
+        version.
       </p>
       <h3>What&apos;s the tech stack?</h3>
       <p>

@@ -42,7 +42,14 @@ export function OnDrag(event) {
     let page = document.getElementById("page-wrapper");
     let leftcol = document.getElementById("left-panel");
 
-    let leftColWidth = isSidebarDragging ? event.clientX : leftcol.clientWidth;
+    let leftColWidth = leftcol.clientWidth;
+    if (event.type == "mousemove") {
+      leftColWidth = isSidebarDragging ? event.clientX : leftcol.clientWidth;
+    } else if (event.type == "touchmove") {
+      leftColWidth = isSidebarDragging
+        ? event.touches[0].clientX
+        : leftcol.clientWidth;
+    }
     leftColWidth = Math.max(leftColWidth, 50);
     leftColWidth = Math.min(leftColWidth, page.clientWidth - 200);
     let rightWidth = page.clientWidth - leftColWidth;
@@ -52,16 +59,18 @@ export function OnDrag(event) {
     let cols = [
       leftColWidth,
       dragbarWidth,
-      page.clientWidth - (2 * dragbarWidth) - leftColWidth + 6,
+      page.clientWidth - 2 * dragbarWidth - leftColWidth + 6,
       dragbarWidth,
-      rightWidth
+      rightWidth,
     ];
 
-    let newColDefn = cols.map(c => c.toString() + "px").join(" ");
+    let newColDefn = cols.map((c) => c.toString() + "px").join(" ");
 
     // console.log(newColDefn);
     page.style.gridTemplateColumns = newColDefn;
     window.dispatchEvent(new Event(DRAG_RESIZE_EVENT_NAME));
-    event.preventDefault()
+    if (event.type == "mousemove") {
+      event.preventDefault();
+    }
   }
 }

@@ -13,8 +13,8 @@ export default function Enigmatographer() {
       <p>
         I realized that I had a very small public-facing presence, which for
         reasons of privacy I liked, but for reasons of employment seemed perhaps
-        less suitable. So I decided to quickly spin up a small &quot;portfolio&quot;
-        website.
+        less suitable. So I decided to quickly spin up a small
+        &quot;portfolio&quot; website.
       </p>
       <p>
         I wanted something simple, but dynamic and slightly unusual. I opted for

@@ -1,9 +1,8 @@
 .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    opacity: .25;
-    font-family:'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  opacity: 0.25;
+  text-align: center;
 }

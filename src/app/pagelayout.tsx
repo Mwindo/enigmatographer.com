@@ -13,6 +13,12 @@ import {
 import ResponsiveText from "./components/ResponsiveText";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const headerFont = localFont({
+  src: "../fonts/lansbury-fg.regular.ttf",
+  variable: "--font-lansbury",
+});
 
 export default function PageLayout({ children }: { children?: ReactNode }) {
   useEffect(() => {
@@ -31,6 +37,12 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
 
   const getSidebarClass = () => {
     return showSidebarOverlay ? styles.left_panel : styles.invisible;
+  };
+
+  const handleMainContentClicked = () => {
+    if (window.innerWidth <= 600) {
+      setShowSidebarOverlay(false);
+    }
   };
 
   const location = usePathname();
@@ -58,8 +70,12 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
       <div
         id="page-wrapper"
         className={styles.grid_container}
-        onMouseUp={EndDrag}
         onMouseMove={(e) => OnDrag(e)}
+        onMouseUp={EndDrag}
+        onMouseLeave={EndDrag}
+        onTouchMove={(e) => OnDrag(e)}
+        onTouchEnd={EndDrag}
+        onTouchCancel={EndDrag}
       >
         <div id="left-panel" className={getSidebarClass()}>
           <SideBar
@@ -71,14 +87,21 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
           id="dragbar"
           className={styles.dragbar}
           onMouseDown={StartLeftDrag}
+          onTouchStart={() => {
+            StartLeftDrag();
+            console.log("started");
+          }}
         >
           <div className={styles.dragicon}></div>
         </div>
-        <div id="right-panel-header" className={styles.right_panel_header}>
+        <div
+          id="right-panel-header"
+          className={`${styles.right_panel_header} ${headerFont.className}`}
+        >
           <Image
             className={styles.sidebar_icon}
             onClick={() => setShowSidebarOverlay(true)}
-            src="sidebar-icon.svg"
+            src="/sidebar-icon.svg"
             width={32}
             height={32}
             alt="Open sidebar"
@@ -96,7 +119,12 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
             options={lastNamePermutations}
           />
         </div>
-        <div className={styles.right_panel_main}>{children}</div>
+        <div
+          onClick={() => handleMainContentClicked()}
+          className={styles.right_panel_main}
+        >
+          {children}
+        </div>
         <div className={styles.footer}>
           <a href="https://github.com/Mwindo" target="_blank">
             https://github.com/Mwindo

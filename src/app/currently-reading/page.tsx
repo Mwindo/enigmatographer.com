@@ -27,7 +27,7 @@ export default function Commonplace() {
           title="Essentials of Programming Languages"
           authors={["Friedman et al."]}
           url="https://mitpress.mit.edu/9780262560672/essentials-of-programming-languages/"
-          image="https://mit-press-us.imgix.net/covers/9780262560672.jpg"
+          image="https://bisom-bucket.s3.us-east-2.amazonaws.com/enigmatographer/book-cover-essentials-programming-languages.png"
         >
           I want to get a better sense of programming language design. So far,
           the most helpful information for me has been about variable binding,
