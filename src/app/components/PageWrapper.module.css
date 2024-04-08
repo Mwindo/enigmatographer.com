@@ -1,47 +1,50 @@
 .page {
-    color: gray;
-    height: 100%;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0rem;
+  color: gray;
+  height: 100%;
+  overflow: scroll;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0rem;
 }
 
 .h1 {
-    padding-bottom: 1rem;
-    text-decoration: none;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  /* Scale the font size so that it fits on most screens but doesn't grow without bound */
+  font-size: min(calc(1em + 1.75vw), 2.5rem);
 }
 
 .close_container {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .close_button {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .close_button:hover {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .link {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .link:hover {
-    color: white;
+  color: white;
 }
 
 .icon {
-    border: 2px solid black;
-    border-radius: 3rem;
-    margin-top: -1rem;
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin-top: -1rem;
 }
 
 .header {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }

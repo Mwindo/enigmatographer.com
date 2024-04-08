@@ -1,16 +1,14 @@
-"use client";
 import PageWrapper from "@/app/components/PageWrapper";
-import { usePathname } from "next/navigation";
-export default function MusicProjects() {
-  const path = usePathname();
-  let dummyBackground: string = "rgb(60, 50, 70)";
+
+export default function Lists() {
   return (
     <PageWrapper
-      header="Project Name"
-      headerLinkURL="https://github.com/Mwindo"
-      backgroundColor={dummyBackground}
+      header="Music Project"
+      headerIcon="/loading_clock.svg"
+      headerIconAlt="Coming Soon image"
+      headerIconCitation="https://www.onlinewebfonts.com/icon/507890"
     >
-      <p>Project content</p>
+      <h3>Coming soon!</h3>
     </PageWrapper>
   );
 }

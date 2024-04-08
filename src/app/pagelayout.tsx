@@ -15,7 +15,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import localFont from "next/font/local";
 
-const headerFont = localFont({
+// TODO: Move this somewhere reasonable
+export const headerFont = localFont({
   src: "../fonts/lansbury-fg.regular.ttf",
   variable: "--font-lansbury",
 });
