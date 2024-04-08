@@ -8,7 +8,7 @@ export default function Projects() {
       <h3>What is your name?</h3>
       <p>See the top of this site.</p>
       <h3>What is your quest?</h3>
-      <p>Something</p>
+      <p>To find a better answer to this question!</p>
       <h3>What is your favorite color?</h3>
       <p>
         <span className={styles.blue}>Blue</span>. Sometimes{" "}
@@ -16,7 +16,8 @@ export default function Projects() {
       </p>
       <h3>Who are you, anyway?</h3>
       <p>
-        I&apos;m a full-stack developer who loves solving interesting puzzles.
+        I&apos;m a full-stack developer who loves learning new things of all
+        sorts and solving interesting puzzles of all sorts.
       </p>
       <h3>What is that icon?</h3>
       <p>
@@ -39,7 +40,7 @@ export default function Projects() {
         is my favorite, but Sherlock Chick looks cooler.)
       </p>
       <h3>Bisom is an interesting last name. Where does it come from?</h3>
-      <h1>🤷</h1>
+      <h1 className={styles.h1}>🤷</h1>
     </PageWrapper>
   );
 }

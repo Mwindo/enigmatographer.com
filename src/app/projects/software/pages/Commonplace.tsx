@@ -34,11 +34,11 @@ export default function Commonplace() {
           >
             https://commonplace.enigmatographer.com
           </a>
-          . Time permitting, I hope to have it "live" sometime in the next
+          . Time permitting, I hope to have it &quot;live&quot; sometime in the next
           couple of months.
         </p>
       </ArticleSection>
-      <ArticleSection title="What's the tech stack?">
+      <ArticleSection title="What&apos;s the tech stack?">
         <p>
           Docker for containerization, Nginx for a reverse proxy, Python Flask
           (with pytest) for the backend, MySQL for the database, React (with

@@ -16,9 +16,10 @@ export default function WordTrain() {
         <p>
           I had a game called Word Train as a child, and I recently wondered how
           solvable it was for given lexicons (since the solvability of the game
-          is inherently dependent on the words allowed). This seemed like a cute
-          project. It also seemed like a project that was easy enough to do a
-          lot with quickly, but which had room to expand indefinitely, e.g.,
+          is inherently dependent on the words allowed). (For more information,
+          see the GitHub page by clicking on the title link.) This seemed like a
+          cute project. It also seemed like a project that was easy enough to do
+          a lot with quickly, but which had room to expand indefinitely, e.g.,
           training models, investigating lexicons with interesting properties
           related to Word Train (for instance, which languages are more
           &apos;fixed&apos;--i.e., unwinnable more often--than others?), etc.
@@ -46,22 +47,25 @@ export default function WordTrain() {
             <ul>
               <li>
                 There is no need to collect all viable words starting with a
-                given prefix, only the "minimum-depth" viable words. For
-                instance, "appl" is a prefix to both "apple" and "applesauce",
-                but "apple" will always occur first and end the game before
-                "applesauce" has a chance to be seen, so there is no need to
-                continue searching for any words that start with the prefix
-                "apple"--they will never occur in the game. This should have
-                been obvious, but I didn&apos;t notice it at first.
+                given prefix, only the &quot;minimum-depth&quot; viable words.
+                For instance, &quot;appl&quot; is a prefix to both
+                &quot;apple&quot; and &quot;applesauce&quot;, but
+                &quot;apple&quot; will always occur first and end the game
+                before &quot;applesauce&quot; has a chance to be seen, so there
+                is no need to continue searching for any words that start with
+                the prefix &quot;apple&quot;--they will never occur in the game.
+                This should have been obvious, but I didn&apos;t notice it at
+                first.
               </li>
               <li>
                 Often, I&apos;ve found that when I am struggling to implement
                 something, I have not fully understood the problem. This was the
                 case with the DFS algorithm: I hadn&apos;t clarified the
-                distinction between what I called "certain" wins (wins that the
-                player is guaranteed if they play perfectly) and "unavoidable"
-                losses (losses that the player is guaranteed unless some other
-                player makes a mistake). Once I went back to{" "}
+                distinction between what I called &quot;certain&quot; wins (wins
+                that the player is guaranteed if they play perfectly) and
+                &quot;unavoidable&quot; losses (losses that the player is
+                guaranteed unless some other player makes a mistake). Once I
+                went back to{" "}
                 <a
                   className={styles.link}
                   href="https://en.wikipedia.org/wiki/How_to_Solve_It"

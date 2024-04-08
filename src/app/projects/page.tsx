@@ -4,9 +4,9 @@ export default function Projects() {
   return (
     <PageWrapper
       header="Projects"
-      headerIcon="/tools.png"
+      headerIcon="/tools.svg"
       headerIconAlt="Image of hammer and screwdriver"
-      headerIconCitation="https://www.vecteezy.com/vector-art/23088624-hammer-and-screwdriver-illustration-vector"
+      headerIconCitation="https://upload.wikimedia.org/wikipedia/commons/8/83/Circle-icons-tools.svg"
     >
       <p>
         I am always working on something or other, although I keep most of this

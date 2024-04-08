@@ -1,5 +1,5 @@
 import PageWrapper from "@/app/components/PageWrapper";
-import styles from "../../../components/PageWrapper.module.css";
+import pageStyles from "../../../components/PageWrapper.module.css";
 import ArticleSection from "@/app/components/ArticleSection";
 import { headerFont } from "@/app/pagelayout";
 
@@ -32,8 +32,15 @@ export default function Enigmatographer() {
           (Riddles also have an affinity with lists, which I likewise find
           myself compiling after having discovered that, despite their
           versatility and ubiquity, they are an oft-overlooked literary device.)
-          If you have a good riddle or puzzle (or an interesting list!
-          examples), please share it with me!
+          If you have a good riddle or puzzle (or an interesting list!{" "}
+          <a
+            className={pageStyles.link}
+            href="https://bisom-bucket.s3.us-east-2.amazonaws.com/enigmatographer/List+Examples.pdf"
+            target="_blank"
+          >
+            examples
+          </a>
+          ), please share it with me!
         </p>
       </ArticleSection>
       <ArticleSection title="What's the tech stack?">
@@ -46,7 +53,7 @@ export default function Enigmatographer() {
         <p>
           The one with my name?{" "}
           <a
-            className={styles.link}
+            className={pageStyles.link}
             href="https://www.1001fonts.com/lansbury-fg-font.html"
             target="_blank"
           >
