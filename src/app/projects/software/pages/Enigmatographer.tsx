@@ -35,7 +35,7 @@ export default function Enigmatographer() {
           If you have a good riddle or puzzle (or an interesting list!{" "}
           <a
             className={pageStyles.link}
-            href="https://bisom-bucket.s3.us-east-2.amazonaws.com/enigmatographer/List+Examples.pdf"
+            href="https://bisom-bucket.s3.us-east-2.amazonaws.com/enigmatographer/List_Examples.pdf"
             target="_blank"
           >
             examples

@@ -33,7 +33,6 @@ const folder = {
             { name: "projects/music/untitled-in-a-minor" },
             { name: "projects/music/untitled-in-g-minor" },
             { name: "projects/music/untitled-in-e-minor" },
-            { name: "projects/music/untitled-in-f-minor" },
           ],
         },
         {
@@ -88,7 +87,7 @@ const SideBar = ({
         selectedIds={[selectedId] as NodeId[]}
         expandedIds={selectedId ? getParentPath(selectedPath || "") : []}
         onNodeSelect={(e) => router.push(getRouteForNode(e.element.name))}
-        nodeRenderer={({ element, getNodeProps, level }) => (
+        nodeRenderer={({ element, getNodeProps, level, handleSelect }) => (
           <div {...getNodeProps()} style={{ paddingLeft: 10 * (level - 1) }}>
             {element.name.split("/").slice(-1)[0]}
           </div>

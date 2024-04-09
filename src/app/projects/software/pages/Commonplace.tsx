@@ -18,8 +18,7 @@ export default function Commonplace() {
           place to document these easy-to-forget moments.
         </p>
         <p>
-          I am putting some finishing touches on it before sharing the deployed
-          version.
+          The project is nearing &quot;completion&quot; but still in progress.
         </p>
       </ArticleSection>
       <ArticleSection title="What does it look like?">
