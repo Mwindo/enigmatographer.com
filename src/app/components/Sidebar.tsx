@@ -88,7 +88,7 @@ const SideBar = ({
         selectedIds={[selectedId] as NodeId[]}
         expandedIds={selectedId ? getParentPath(selectedPath || "") : []}
         onNodeSelect={(e) => router.push(getRouteForNode(e.element.name))}
-        nodeRenderer={({ element, getNodeProps, level, handleSelect }) => (
+        nodeRenderer={({ element, getNodeProps, level }) => (
           <div {...getNodeProps()} style={{ paddingLeft: 10 * (level - 1) }}>
             {element.name.split("/").slice(-1)[0]}
           </div>

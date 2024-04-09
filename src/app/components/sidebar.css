@@ -1,43 +1,48 @@
 .basic.tree {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .basic .tree-node,
-  .basic .tree-node-group {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .basic .tree-branch-wrapper,
-  .basic .tree-node__leaf {
-    outline: none;
-  }
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .basic .tree-node--focused {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .basic .tree-node--selected {
-    /* outline-color: rgb(77, 144, 254);
+.basic .tree-node:focus {
+  font-weight: bold;
+}
+
+.basic .tree-node,
+.basic .tree-node-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.basic .tree-branch-wrapper,
+.basic .tree-node__leaf {
+  outline: none;
+}
+
+.basic .tree-node--focused {
+  display: block;
+  font-weight: bold;
+}
+
+.basic .tree-node--selected {
+  /* outline-color: rgb(77, 144, 254);
     outline-style: auto;
     outline-width: 2px; */
-    color: yellow;
-    display: block;
-  }
-  
-  .basic .tree-node__branch {
-    display: block;
-    padding: 0;
-    text-decoration: underline;
-  }
+  color: yellow;
+  display: block;
+}
 
-  .basic .tree-node:hover {
-    background-color: rgb(43, 54, 61);
-  }
-  
-  .basic .tree-node {
-    cursor: pointer;
-  }
+.basic .tree-node__branch {
+  display: block;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.basic .tree-node:hover {
+  background-color: rgb(43, 54, 61);
+}
+
+.basic .tree-node {
+  cursor: pointer;
+}

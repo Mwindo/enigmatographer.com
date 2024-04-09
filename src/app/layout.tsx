@@ -9,7 +9,7 @@ const mainFont = Titillium_Web({
   subsets: ["latin"],
   variable: "--font-main",
   display: "swap",
-  weight: "200",
+  weight: ['200', '600'],
 });
 
 export const metadata: Metadata = {
