@@ -45,7 +45,10 @@ export default function Commonplace() {
             I want to get a better sense of programming language design. So far,
             the most helpful information for me has been about variable binding,
             scopes, and extents (e.g., why closures lead to semi-infinite
-            binding extents, and what lexical vs. dynamic scoping entails).
+            binding extents, and what lexical vs. dynamic scoping entails); and
+            about implicit vs. explicit referencing and eager vs. lazy parameter
+            passing (e.g., why lazy parameter passing works well in functional
+            languages but not in stateful languages).
           </p>
         </BookItem>
         <BookItem
