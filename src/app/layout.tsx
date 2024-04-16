@@ -13,8 +13,8 @@ const mainFont = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-  title: "Enigmatographer",
-  description: "Christopher Bisom",
+  title: "Enigmatographer: Christopher Bisom",
+  description: "Christopher Bisom's personal site",
 };
 
 export default function RootLayout({
