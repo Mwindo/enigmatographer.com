@@ -16,9 +16,6 @@ export default function Projects() {
           strive to answer).&quot;
         </p>
       </ArticleSection>
-      <ArticleSection title="What is your quest?">
-        <p>To find a better answer to this question!</p>
-      </ArticleSection>
       <ArticleSection title="What is your favorite color?">
         <p>
           <span className={styles.blue}>Blue</span>. Sometimes{" "}
