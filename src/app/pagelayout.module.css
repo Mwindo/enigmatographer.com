@@ -122,6 +122,7 @@
   /* border: 2px dotted gray; */
   grid-area: dragbar;
   height: 100%;
+  cursor: ew-resize;
 }
 
 .dragicon {
