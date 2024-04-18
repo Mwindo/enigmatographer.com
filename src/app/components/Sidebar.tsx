@@ -1,6 +1,5 @@
 import React from "react";
 import TreeView, {
-  ITreeViewOnNodeSelectProps,
   NodeId,
   flattenTree,
 } from "react-accessible-treeview";

@@ -1,15 +1,18 @@
 "use client";
 
 import styles from "./pagelayout.module.css";
-import { ReactNode, useEffect, useState } from "react";
+import {
+  MouseEvent,
+  ReactNode,
+  TouchEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import SideBar from "./components/Sidebar";
 import PermutableText from "./components/PermutableText";
-import {
-  EndDrag,
-  OnDrag,
-  StartLeftDrag,
-  ResetColumnSizes,
-} from "./draggableGrid.js";
+import { DRAG_RESIZE_EVENT_NAME } from "./draggableGrid";
 import ResponsiveText from "./components/ResponsiveText";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -21,20 +24,37 @@ export const headerFont = localFont({
   variable: "--font-lansbury",
 });
 
+// TODO: Refactor so that these values are DRYer; right now, they appear in multiple places
+const DRAG_BAR_WIDTH = 6;
+const SIDEBAR_BREAKPOINT = 600;
+const MIN_SIDEBAR_WIDTH = 50;
+const MIN_MAINPAGE_WIDTH = 200;
+
 export default function PageLayout({ children }: { children?: ReactNode }) {
+  const [showSidebarOverlay, setShowSidebarOverlay] = useState(true);
+  const [isDraggingSideBar, setIsDraggingSideBar] = useState(false);
+  const pageWrapperRef = useRef<any>(null);
+  const leftPanelRef = useRef<any>(null);
+
   useEffect(() => {
+    // TODO: comment this function, and use classes rather than setting style directly
     window.onresize = () => {
-      ResetColumnSizes();
-      if (window.innerWidth > 600) {
+      const pageWrapper = pageWrapperRef.current;
+      if (pageWrapper) {
+        if (pageWrapper.clientWidth >= SIDEBAR_BREAKPOINT) {
+          pageWrapper.style.gridTemplateColumns = `22% ${DRAG_BAR_WIDTH}px 78%`;
+        } else {
+          pageWrapper.style.gridTemplateColumns = "0% 0px 100%";
+        }
+      }
+      if (window.innerWidth > SIDEBAR_BREAKPOINT) {
         setShowSidebarOverlay(true);
       }
     };
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= SIDEBAR_BREAKPOINT) {
       setShowSidebarOverlay(false);
     }
   }, []);
-
-  const [showSidebarOverlay, setShowSidebarOverlay] = useState(true);
 
   const getSidebarClass = () => {
     return showSidebarOverlay ? styles.left_panel : styles.invisible;
@@ -44,6 +64,55 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
     if (window.innerWidth <= 600) {
       setShowSidebarOverlay(false);
     }
+  };
+
+  const startDrag = useCallback(() => {
+    setIsDraggingSideBar(true);
+  }, [setIsDraggingSideBar]);
+
+  const endDrag = useCallback(() => {
+    setIsDraggingSideBar(false);
+  }, [setIsDraggingSideBar]);
+
+  const onDrag = (event: MouseEvent | TouchEvent) => {
+    // Modification of the code here https://stackoverflow.com/a/57426239
+    const pageWrapper = pageWrapperRef.current;
+    const leftPanel = leftPanelRef.current;
+    if (!isDraggingSideBar || !pageWrapper || !leftPanel) {
+      return;
+    }
+    // We will calculate where the mouse/touch is located
+    let columnWidth = 0;
+    if (event.type === "mousemove") {
+      event.preventDefault();
+      columnWidth = (event as MouseEvent).clientX;
+    } else if (event.type === "touchmove") {
+      columnWidth = (event as TouchEvent).touches[0].clientX;
+    }
+    // Then, we will make sure the columnWidth is not too small or too big (crowding the main page entirely)
+    columnWidth = Math.max(columnWidth, MIN_SIDEBAR_WIDTH);
+    columnWidth = Math.min(
+      columnWidth,
+      pageWrapper.clientWidth - MIN_MAINPAGE_WIDTH
+    );
+    let rightWidth = pageWrapper.clientWidth - columnWidth;
+
+    let cols = [
+      columnWidth,
+      DRAG_BAR_WIDTH,
+      pageWrapper.clientWidth -
+        2 * DRAG_BAR_WIDTH -
+        columnWidth +
+        DRAG_BAR_WIDTH,
+      DRAG_BAR_WIDTH,
+      rightWidth,
+    ];
+
+    let newColDefn = cols.map((c) => c.toString() + "px").join(" ");
+
+    // TODO: use classes rather than setting style directly
+    pageWrapper.style.gridTemplateColumns = newColDefn;
+    window.dispatchEvent(new Event(DRAG_RESIZE_EVENT_NAME));
   };
 
   const location = usePathname();
@@ -70,15 +139,16 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
     <main id="main" className={styles.main}>
       <div
         id="page-wrapper"
+        ref={pageWrapperRef}
         className={styles.grid_container}
-        onMouseMove={(e) => OnDrag(e)}
-        onMouseUp={EndDrag}
-        onMouseLeave={EndDrag}
-        onTouchMove={(e) => OnDrag(e)}
-        onTouchEnd={EndDrag}
-        onTouchCancel={EndDrag}
+        onMouseMove={(e) => onDrag(e)}
+        onMouseUp={endDrag}
+        onMouseLeave={endDrag}
+        onTouchMove={(e) => onDrag(e)}
+        onTouchEnd={endDrag}
+        onTouchCancel={endDrag}
       >
-        <div id="left-panel" className={getSidebarClass()}>
+        <div id="left-panel" ref={leftPanelRef} className={getSidebarClass()}>
           <SideBar
             selectedPath={location}
             handleClose={() => setShowSidebarOverlay(!showSidebarOverlay)}
@@ -87,11 +157,8 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
         <div
           id="dragbar"
           className={styles.dragbar}
-          onMouseDown={StartLeftDrag}
-          onTouchStart={() => {
-            StartLeftDrag();
-            console.log("started");
-          }}
+          onMouseDown={startDrag}
+          onTouchStart={startDrag}
         >
           <div className={styles.dragicon}></div>
         </div>
