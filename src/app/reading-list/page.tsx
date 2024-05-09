@@ -3,7 +3,7 @@ import PageWrapper from "@/app/components/PageWrapper";
 export default function Commonplace() {
   return (
     <PageWrapper
-      header="Currently Reading"
+      header="What I Am Reading"
       headerLinkURL=""
       headerIcon="/library.png"
       headerIconAlt="Library icon"
