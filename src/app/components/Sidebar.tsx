@@ -1,12 +1,10 @@
 import React from "react";
-import TreeView, {
-  NodeId,
-  flattenTree,
-} from "react-accessible-treeview";
+import TreeView, { NodeId, flattenTree } from "react-accessible-treeview";
 import "./sidebar.css";
 import { useRouter } from "next/navigation";
 import styles from "./Sidebar.module.css";
 
+// TODO: Make this more dynamic. It shouldn't be here.
 const folder = {
   name: "",
   children: [
@@ -40,7 +38,11 @@ const folder = {
       ],
     },
     {
-      name: "currently-reading",
+      name: "reading-list",
+      children: [
+        { name: "reading-list/currently-reading" },
+        { name: "reading-list/recently-finished" },
+      ],
     },
     {
       name: "contact",
