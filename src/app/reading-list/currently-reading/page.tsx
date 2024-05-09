@@ -1,6 +1,7 @@
 import PageWrapper from "@/app/components/PageWrapper";
-import BookItem from "../components/BookItem";
-import BookItemList from "../components/BookItemList";
+import BookItem from "../../components/BookItem";
+import BookItemList from "../../components/BookItemList";
+import styles from "../../components/PageWrapper.module.css";
 
 export default function Commonplace() {
   return (
@@ -12,10 +13,6 @@ export default function Commonplace() {
       headerIconCitation="https://freeiconshop.com/icon/book-icon-flat/"
     >
       <BookItemList>
-        <p>
-          I love to read. I am always reading, generally multiple things
-          simultaneously.
-        </p>
         <BookItem
           title="The Story of the Stone"
           authors={["Cao Xuequin", "David Hawkes"]}
@@ -33,24 +30,6 @@ export default function Commonplace() {
             shenanigans of characters like Wu Yong and (especially) Zhuge Liang;
             on the other, I appreciate the psychological depth and literariness
             of this later novel.
-          </p>
-        </BookItem>
-        <BookItem
-          title="Essentials of Programming Languages"
-          authors={["Friedman et al."]}
-          url="https://mitpress.mit.edu/9780262560672/essentials-of-programming-languages/"
-          image="https://bisom-bucket.s3.us-east-2.amazonaws.com/enigmatographer/book-cover-essentials-programming-languages.png"
-        >
-          <p>
-            I want to get a better sense of programming language design. So far,
-            the most interesting and/or helpful information for me has been
-            about variable binding, scopes, and extents (e.g., why closures lead
-            to semi-infinite binding extents, and what lexical vs. dynamic
-            scoping entails); implicit vs. explicit referencing and eager vs.
-            lazy parameter passing (e.g., why lazy parameter passing works well
-            in functional languages but not in stateful languages); control
-            contexts and continuations (e.g., what exactly tail-call
-            optimizations and trampolining are).
           </p>
         </BookItem>
         <BookItem
@@ -83,6 +62,51 @@ export default function Commonplace() {
           Everywhere he takes pains to note just how exceptional he is--in
           suffering, in honesty, in humility, in serenity. It reminds me a bit
           of Cicero, but a little whinier.
+        </BookItem>
+        <BookItem
+          title="Metamagical Themas"
+          authors={["Douglas Hofstadter"]}
+          url="https://en.wikipedia.org/wiki/Metamagical_Themas"
+          image="https://upload.wikimedia.org/wikipedia/en/7/7a/Metamagical_Themas.jpg"
+        >
+          <p>
+            A delightful collection of essays on recursion, reflexivity, music,
+            A.I., and other mathemagical topics. I began reading this without
+            intending to and found myself a third of the way through. It is
+            interesting to compare the ideas about artificial intelligence in
+            the 1980s to the recent phase shift with LLMs.
+          </p>
+        </BookItem>
+        <BookItem
+          title="The Evolution of Biological Information"
+          authors={["Christopher Adami"]}
+          url="https://press.princeton.edu/books/hardcover/9780691241166/the-evolution-of-biological-information"
+          image="https://pup-assets.imgix.net/onix/images/9780691241166.jpg?w=410&auto=format"
+        >
+          <p>
+            I found Christopher Adami&apos;s discussion of information theory in{" "}
+            <a
+              className={styles.link}
+              href="https://www.preposterousuniverse.com/podcast/2024/02/19/266-christoph-adami-on-how-information-makes-sense-of-biology/"
+              target="_blank"
+            >
+              this podcast
+            </a>{" "}
+            highly enlightening as it clarified several ideas I had only thought
+            through halfway. For instance: A great many tensions--sense vs.
+            nonsense, biologically fit vs. not, &quot;good A.I.&quot; vs.
+            &quot;dangerous A.I.&quot;--can be thought of as alignment problems,
+            i.e., aligning one system so that it &quot;fits nicely&quot; with
+            another. Of course, as Adami explains (in a biological context which
+            I recklessly generalize!), these alignment problems are
+            &quot;really&quot; about mutual information. This leads to a whole
+            series of fascinating questions: If information is contextual
+            (information is only information <i>about</i> something), then what
+            about that old bugbear of philosophers, &quot;Truth?&quot; If
+            meaning/fitness/etc. is a dynamic relationship between object and
+            environment, how might the two mutually shape (or diverge from) each
+            other? I decided to read the book.
+          </p>
         </BookItem>
       </BookItemList>
     </PageWrapper>
