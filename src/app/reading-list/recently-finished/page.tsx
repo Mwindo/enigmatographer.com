@@ -63,27 +63,28 @@ export default function Commonplace() {
             there is a mystery hiding behind each word. Many of his sentences
             are a delight to read. He is a master of the complement: a focus on
             the shadows, on the binaries, on the negative spaces, etc. Examples:
-            "He divided the voices in his mouth into masculine and feminine, on
-            Marian holidays he uttered only the vowels and on other holidays
-            only the consonants" (26); "Or they [the monks] would utter only
-            nouns, because these come from God, and would avoid verbs, which
-            belong to Satan" (73). Do I understand the whole novel? No, although
-            I am not sure how much of it is meant to be understood. A Landscape
-            Painted with Tea is like a great dream: pregnant with
-            undifferentiated meaning (a sort of{" "}
+            &quot;He divided the voices in his mouth into masculine and
+            feminine, on Marian holidays he uttered only the vowels and on other
+            holidays only the consonants&quot; (26); &quot;Or they [the monks]
+            would utter only nouns, because these come from God, and would avoid
+            verbs, which belong to Satan&quot; (73). Do I understand the whole
+            novel? No, although I am not sure how much of it is meant to be
+            understood. A Landscape Painted with Tea is like a great dream:
+            pregnant with undifferentiated meaning (a sort of{" "}
             <a
               className={styles.link}
               href="https://en.wikipedia.org/wiki/Writing_Degree_Zero"
               target="_blank"
             >
-              "meaning degree zero"
+              &quot;meaning degree zero&quot;
             </a>
             ), full of brilliant images and thoughtful scenarios, a paeon to the
             the way that rhetoric grapples with and structures reality (through
             paradox, antithesis, etc.). Pavić offers two different ways to read
-            the novel: in "page-order," or in "crossword" order. Here are two
-            more: One can dive in and certainly find something worth treasuring,
-            but one can just as well let the novel wash over them, smiling.
+            the novel: in &quot;page-order,&quot; or in &quot;crossword&quot;
+            order. Here are two more: One can dive in and certainly find
+            something worth treasuring, but one can just as well let the novel
+            wash over them, smiling.
           </p>
         </BookItem>
         <BookItem
@@ -100,12 +101,13 @@ export default function Commonplace() {
             doesn't contain the revelation that is sometimes enjoyable in a
             mystery--unlike (say) the Vane Sisters but like much of his
             paranoia-infused work, it actively thwarts such revelation--but the
-            final "twist" (he is in the wrong hospital room, just as Sebastian
-            visited the wrong room when trying to trace out his mother's final
-            days) is clever, in its way, if somewhat predictable. I think the
-            most compelling interpretation is that this is about the process of
-            writing, connecting, narrativizing our lives--a vivisection of the
-            author at play. Not a masterpiece, but written by a master.
+            final &quot;twist&quot; (he is in the wrong hospital room, just as
+            Sebastian visited the wrong room when trying to trace out his
+            mother's final days) is clever, in its way, if somewhat predictable.
+            I think the most compelling interpretation is that this is about the
+            process of writing, connecting, narrativizing our lives--a
+            vivisection of the author at play. Not a masterpiece, but written by
+            a master.
           </p>
         </BookItem>
         <BookItem
@@ -146,11 +148,11 @@ export default function Commonplace() {
           <p>
             Like a more Kafka-esque, slightly longer-form Borges. In general, he
             seems to have some great ideas and brilliant phrasing, but mixed
-            overall execution. E.g., "The Collector of Cracks" is held back by
-            its more metatextual, "framing" element; the interdiegetic parable
-            itself, however, is ingenious. I enjoyed the stories a great deal,
-            but in general I felt that something was missing. [More thoughts to
-            come.]
+            overall execution. E.g., &quot;The Collector of Cracks&quot; is held
+            back by its more metatextual, &quot;framing&quot; element; the
+            interdiegetic parable itself, however, is ingenious. I enjoyed the
+            stories a great deal, but in general I felt that something was
+            missing. [More thoughts to come.]
           </p>
         </BookItem>
         <BookItem
