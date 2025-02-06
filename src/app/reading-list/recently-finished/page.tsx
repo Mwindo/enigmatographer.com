@@ -42,7 +42,10 @@ export default function Commonplace() {
             intending to and found myself a third of the way through. It is
             interesting to compare the ideas about artificial intelligence in
             the 1980s to the recent phase shift with LLMs. I most enjoyed the
-            self-reflexive sentences, like this one; the dea of parquet deformations. It also suggested to me Codex Se
+            self-reflexive sentences, like this one; the idea of parquet
+            deformations; and the game theoretic experiments (e.g., Axelrod). It
+            also suggested to me Codex Seraphinianus, a curious piece of
+            literature (?).
           </p>
         </BookItem>
       </BookItemList>
