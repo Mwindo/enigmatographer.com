@@ -98,16 +98,16 @@ export default function Commonplace() {
             beautiful. The tale exists in, or is composed of, a lyrical
             metafictional mist: this piece perhaps interacting with that, this
             comment a recollection of a quote from two chapters before, etc. It
-            doesn't contain the revelation that is sometimes enjoyable in a
+            doesn&apos;t contain the revelation that is sometimes enjoyable in a
             mystery--unlike (say) the Vane Sisters but like much of his
             paranoia-infused work, it actively thwarts such revelation--but the
             final &quot;twist&quot; (he is in the wrong hospital room, just as
             Sebastian visited the wrong room when trying to trace out his
-            mother's final days) is clever, in its way, if somewhat predictable.
-            I think the most compelling interpretation is that this is about the
-            process of writing, connecting, narrativizing our lives--a
-            vivisection of the author at play. Not a masterpiece, but written by
-            a master.
+            mother&apos;s final days) is clever, in its way, if somewhat
+            predictable. I think the most compelling interpretation is that this
+            is about the process of writing, connecting, narrativizing our
+            lives--a vivisection of the author at play. Not a masterpiece, but
+            written by a master.
           </p>
         </BookItem>
         <BookItem
@@ -126,11 +126,11 @@ export default function Commonplace() {
         >
           <p>
             A good, humorous (but serious philosophical) book that takes up
-            Wittgenstein's challenge to define a game. The central thesis, which
-            is playfully expounded and defended in dialogic fashion (sometimes
-            even with nested and metaleptic dialogues), is that a game 1)
-            involves a prelusory goal (a way of framing the goal of the game
-            outside of the game itself, even if--like chess--using the
+            Wittgenstein&apos;s challenge to define a game. The central thesis,
+            which is playfully expounded and defended in dialogic fashion
+            (sometimes even with nested and metaleptic dialogues), is that a
+            game 1) involves a prelusory goal (a way of framing the goal of the
+            game outside of the game itself, even if--like chess--using the
             terminology of the game is a useful expedient), 2) sought only via
             lusory means that 3) are constrained by constitutive rules that
             permit only less efficient ways of obtaining the goal, all
