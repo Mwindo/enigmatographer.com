@@ -30,6 +30,21 @@ export default function Commonplace() {
             optimizations and trampolining are).
           </p>
         </BookItem>
+        <BookItem
+          title="Metamagical Themas"
+          authors={["Douglas Hofstadter"]}
+          url="https://en.wikipedia.org/wiki/Metamagical_Themas"
+          image="https://upload.wikimedia.org/wikipedia/en/7/7a/Metamagical_Themas.jpg"
+        >
+          <p>
+            A delightful collection of essays on recursion, reflexivity, music,
+            A.I., and other mathemagical topics. I began reading this without
+            intending to and found myself a third of the way through. It is
+            interesting to compare the ideas about artificial intelligence in
+            the 1980s to the recent phase shift with LLMs. I most enjoyed the
+            self-reflexive sentences, like this one; the dea of parquet deformations. It also suggested to me Codex Se
+          </p>
+        </BookItem>
       </BookItemList>
     </PageWrapper>
   );
