@@ -17,7 +17,7 @@ export default function Commonplace() {
           title="The Story of the Stone"
           authors={["Cao Xuequin", "David Hawkes"]}
           url="https://en.wikipedia.org/wiki/Dream_of_the_Red_Chamber"
-          image="https://m.media-amazon.com/images/I/41ExgvBqVXL._SY445_SX342_.jpg"
+          image="https://m.media-amazon.com/images/I/41PFtu2F19L._SY445_SX342_.jpg"
         >
           <p>
             I have been reading the four Classic Chinese Novels (in
@@ -62,20 +62,6 @@ export default function Commonplace() {
           Everywhere he takes pains to note just how exceptional he is--in
           suffering, in honesty, in humility, in serenity. It reminds me a bit
           of Cicero, but a little whinier.
-        </BookItem>
-        <BookItem
-          title="Metamagical Themas"
-          authors={["Douglas Hofstadter"]}
-          url="https://en.wikipedia.org/wiki/Metamagical_Themas"
-          image="https://upload.wikimedia.org/wikipedia/en/7/7a/Metamagical_Themas.jpg"
-        >
-          <p>
-            A delightful collection of essays on recursion, reflexivity, music,
-            A.I., and other mathemagical topics. I began reading this without
-            intending to and found myself a third of the way through. It is
-            interesting to compare the ideas about artificial intelligence in
-            the 1980s to the recent phase shift with LLMs.
-          </p>
         </BookItem>
         <BookItem
           title="The Evolution of Biological Information"
