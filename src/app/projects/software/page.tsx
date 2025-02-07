@@ -11,11 +11,11 @@ export default function Software() {
         <p>This directory contains a handful of personal software projects.</p>
         <br />
         <p>
-          As of right now (2024), I do most of my backend programming in Python,
-          although I have extensive experience with .NET and some experience
-          with C and PHP. Most of my frontend work is in JavaScript/TypeScript,
-          either with or without React. I am currently getting into more machine
-          learning with PyTorch. Stay tuned!
+          As of right now (early 2025), I do most of my backend programming in
+          Python and Node, although I have extensive experience with .NET and
+          some experience with C, PHP, and Go. Most of my frontend work is in
+          JavaScript/TypeScript, either with or without React. I am currently
+          getting into more machine learning with PyTorch. Stay tuned!
         </p>
         <br />
         <p>
