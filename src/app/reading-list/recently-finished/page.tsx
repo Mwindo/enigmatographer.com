@@ -79,7 +79,17 @@ export default function Commonplace() {
           url="https://algorithmstoliveby.com/"
           image="https://m.media-amazon.com/images/I/510GRAYQNSL._SY445_SX342_.jpg"
         >
-          <p>[More thoughts to come.]</p>
+          <p>
+            An enjoyable light read. The relevance of the chosen computer
+            science concepts to everyday life is often overly simplistic and
+            sometimes contrived (&quot;relaxation&quot;, for instance,
+            precariously balanced on multiple senses of the word), but casting
+            daily decisions in terms of optimal stopping, the explore/exploit
+            tradeoff, and cacheing strategies is at the very least entertaining
+            and sometimes maybe even helpful. I also appreciated being exposed
+            to the multi-armed bandit problem and Gitten index, which were
+            unfamiliar to me before.
+          </p>
         </BookItem>
         <BookItem
           title="Short Stories"
