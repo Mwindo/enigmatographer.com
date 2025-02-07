@@ -37,7 +37,7 @@ export default function Commonplace() {
               All seasons my caps I wear without fail
               <br />
               Around my fat belly my girdle is hot
-              <br />I move round and round tho' legs I have not
+              <br />I move round and round tho&apos; legs I have not
             </i>
             <br />
             <br />
@@ -69,8 +69,8 @@ export default function Commonplace() {
             my favorite because of its charmingly understated and unresolved
             bizarreness.) Somewhat distracting is the panoply of sexy female
             ghosts and fox spirits visiting lonely sexless men that brings to
-            mind terms like "scopophilia" and "male gaze" and
-            &quot;l&apos;écriture feminine&quot; etc.
+            mind terms like &quot;scopophilia&quot; and &quot;male gaze&quot;
+            and &quot;l&apos;écriture feminine&quot; etc.
           </p>
         </BookItem>
         <BookItem
