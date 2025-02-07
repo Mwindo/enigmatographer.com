@@ -19,7 +19,59 @@ export default function Commonplace() {
           url="https://en.wikipedia.org/wiki/The_Hearing_Trumpet"
           image="https://m.media-amazon.com/images/I/41S1cIe1fmL._SY445_SX342_.jpg"
         >
-          <p>What a trip! [More thoughts to come.]</p>
+          <p>
+            What a trip! Hilariously surreal, this book was not quite like
+            anything I have read before. A great mixture of transcontinental
+            adventure (as it were), occultic magic, existential mystery, and
+            drama as we follow 92-year-old Marian on her journey of
+            self-discovery and/or self-destruction. The cozily apocalyptic
+            ending was, on the whole, unsatisfying given the utter craziness of
+            the rest of the book, but that utter craziness more than makes up
+            for it. Also, props to Carrington for writing a solid, original
+            riddle:
+            <br />
+            <br />
+            <i>
+              I wear a white cap on my head and my tail
+              <br />
+              All seasons my caps I wear without fail
+              <br />
+              Around my fat belly my girdle is hot
+              <br />I move round and round tho' legs I have not
+            </i>
+            <br />
+            <br />
+            (The other two riddles in the book are good in their way, too, but
+            the second--vaguely in the tradition of{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Neck_riddle"
+              className={styles.link}
+              target="_blank"
+            >
+              neck riddles
+            </a>
+            --begins to rely on the specifics of the text and encourages the
+            third to double down and leap into surreal, mystical territory.)
+          </p>
+        </BookItem>
+        <BookItem
+          title="Strange Tales from a Chinese Studio"
+          authors={["Pu Songling", "John Minford"]}
+          url="https://en.wikipedia.org/wiki/Strange_Tales_from_a_Chinese_Studio"
+          image="https://m.media-amazon.com/images/I/41mNvzk+SiL._SY445_SX342_.jpg"
+        >
+          <p>
+            I lack the background to fully appreciate the learnedness or the
+            blending of the zhiguai (Weird Account) and chuanqi (Strange Story)
+            genres, but this selection of Pu Songling&apos;s tales is
+            entertaining and contains a few little gems. (Although unlikely to
+            be among the more popular tales, &quot;The Little Mandarin&quot; is
+            my favorite because of its charmingly understated and unresolved
+            bizarreness.) Somewhat distracting is the panoply of sexy female
+            ghosts and fox spirits visiting lonely sexless men that brings to
+            mind terms like "scopophilia" and "male gaze" and
+            &quot;l&apos;écriture feminine&quot; etc.
+          </p>
         </BookItem>
         <BookItem
           title="Algorithms to Live By"
@@ -30,22 +82,14 @@ export default function Commonplace() {
           <p>[More thoughts to come.]</p>
         </BookItem>
         <BookItem
-          title="Strange Tales from a Chinese Studio"
-          authors={["Pu Songling", "John Minford"]}
-          url="https://en.wikipedia.org/wiki/Strange_Tales_from_a_Chinese_Studio"
-          image="https://m.media-amazon.com/images/I/41mNvzk+SiL._SY445_SX342_.jpg"
-        >
-          <p>[More thoughts to come.]</p>
-        </BookItem>
-        <BookItem
           title="Short Stories"
           authors={["Lu Xun", "Julia Lovell"]}
           url="https://en.wikipedia.org/wiki/Lu_Xun"
           image="https://m.media-amazon.com/images/I/61cn+n5z1wL._SL1200_.jpg"
         >
           <p>
-            Somewhat like Chekhov, but with a stronger moral flavor. [More
-            thoughts to come.]
+            Lu Xun reminds me of Chekhov, but with a stronger moral flavor.
+            [More thoughts to come.]
           </p>
         </BookItem>
         <BookItem
@@ -55,10 +99,9 @@ export default function Commonplace() {
           image="https://m.media-amazon.com/images/I/41eDQkSFR3L._SY445_SX342_.jpg"
         >
           <p>
-            Like Nabokov, Calvino, or Woolf, Milorad Pavić is simply a
-            delightful writer. He could write an instruction manual, and I would
-            read it. Not everything he says is golden--indeed, there is a
-            certain Mannerist tendency to some of his sentences that verges on
+            Like Nabokov, Calvino, or Woolf, Milorad Pavić is a <i>writer</i>.
+            Not everything he says is golden--indeed, there is at times a
+            certain Mannerist tendency in his phrasing that verges on
             nonsense--but his writing is always sensuous, flirtatious, as if
             there is a mystery hiding behind each word. Many of his sentences
             are a delight to read. He is a master of the complement: a focus on
@@ -69,7 +112,7 @@ export default function Commonplace() {
             would utter only nouns, because these come from God, and would avoid
             verbs, which belong to Satan&quot; (73). Do I understand the whole
             novel? No, although I am not sure how much of it is meant to be
-            understood. A Landscape Painted with Tea is like a great dream:
+            understood. <i>Landscape Painted with Tea</i> is like a great dream:
             pregnant with undifferentiated meaning (a sort of{" "}
             <a
               className={styles.link}
@@ -83,8 +126,8 @@ export default function Commonplace() {
             paradox, antithesis, etc.). Pavić offers two different ways to read
             the novel: in &quot;page-order,&quot; or in &quot;crossword&quot;
             order. Here are two more: One can dive in and certainly find
-            something worth treasuring, but one can just as well let the novel
-            wash over them, smiling.
+            something worth treasuring within its depths, but one can just as
+            well let the novel wash over them, smiling.
           </p>
         </BookItem>
         <BookItem
@@ -99,10 +142,10 @@ export default function Commonplace() {
             metafictional mist: this piece perhaps interacting with that, this
             comment a recollection of a quote from two chapters before, etc. It
             doesn&apos;t contain the revelation that is sometimes enjoyable in a
-            mystery--unlike (say) the Vane Sisters but like much of his
-            paranoia-infused work, it actively thwarts such revelation--but the
-            final &quot;twist&quot; (he is in the wrong hospital room, just as
-            Sebastian visited the wrong room when trying to trace out his
+            mystery--unlike (say) &quot;The Vane Sisters&quot; but like much of
+            his paranoia-infused work, it actively thwarts such revelation--but
+            the final &quot;twist&quot; (he is in the wrong hospital room, just
+            as Sebastian visited the wrong room when trying to trace out his
             mother&apos;s final days) is clever, in its way, if somewhat
             predictable. I think the most compelling interpretation is that this
             is about the process of writing, connecting, narrativizing our
@@ -116,7 +159,32 @@ export default function Commonplace() {
           url="https://en.wikipedia.org/wiki/A_Perfect_Vacuum"
           image="https://m.media-amazon.com/images/I/41kLRlFWC6L._SY445_SX342_.jpg"
         >
-          <p>Among my favorite books. [More thoughts to come.]</p>
+          <p>
+            A brilliant book, and one of my new favorites. Written with verve
+            and erudition, simultaneously silly and profound. It is difficult
+            for me to mark &quot;highlights&quot; as I found something of
+            interest in every story. However, the &quot;logical&quot; world of
+            Marcel Coscat&apos;s Robinson being torn apart by none other than
+            Robinson himself, the paranoic interconnectedness in
+            &quot;Gigamesh,&quot; the hilarious audacity of a German Nazi cohort
+            trying to re-create 18th-century France in inner Argentina in
+            &quot;Gruppenfürher Louis XVI,&quot; the bizarre meditations on the
+            different levels of genius in &quot;Odysseus of Ithaca,&quot; the
+            humbling suggestion that all of culture is clothing that transforms
+            (in the realm of ideas) the awfulness of life (sickness, old age,
+            death) into virtue (experience, wisdom, dying for an ideal) for
+            evolutionary reasons in &quot;Die Kultur als Fehler,&quot; the
+            radical assessment of the interminable series of chance events in
+            &quot;Being Inc.&quot; and &quot;De Impossibilitate Vitae and De
+            Impossibilitate Prognoscendi,&quot; the dialogues of personoids who
+            subsist in the mathematics provided by computers in &quot;Non
+            Serviam,&quot; the idea that the universe is full of agents who
+            designed the rules of nature (which are changing) and thus the
+            absence of communication is in itself a signal in &quot;The New
+            Cosmogony&quot;--what a blast. Themes include the blurring of real
+            and artificial, the aggregation of chance, writing and reading,
+            thought and reality, consciousness, representation.
+          </p>
         </BookItem>
         <BookItem
           title="The Grasshopper: Games, Life, and Utopia"
@@ -125,7 +193,7 @@ export default function Commonplace() {
           image="https://m.media-amazon.com/images/I/41oxZwD9ZAL._SY445_SX342_.jpg"
         >
           <p>
-            A good, humorous (but serious philosophical) book that takes up
+            A good, humorous (but seriously philosophical) book that takes up
             Wittgenstein&apos;s challenge to define a game. The central thesis,
             which is playfully expounded and defended in dialogic fashion
             (sometimes even with nested and metaleptic dialogues), is that a
@@ -151,8 +219,8 @@ export default function Commonplace() {
             overall execution. E.g., &quot;The Collector of Cracks&quot; is held
             back by its more metatextual, &quot;framing&quot; element; the
             interdiegetic parable itself, however, is ingenious. I enjoyed the
-            stories a great deal, but in general I felt that something was
-            missing. [More thoughts to come.]
+            stories a great deal, but overall I felt that something was missing.
+            [More thoughts to come.]
           </p>
         </BookItem>
         <BookItem
@@ -169,7 +237,7 @@ export default function Commonplace() {
           url="https://en.wikipedia.org/wiki/The_Colour_of_Magic"
           image="https://m.media-amazon.com/images/I/51jq1UN0VJL._SY445_SX342_.jpg"
         >
-          <p>[More thoughts to come.]</p>
+          <p>A fun romp.[More thoughts to come.]</p>
         </BookItem>
         <BookItem
           title="The Story of the Stone"
@@ -187,7 +255,15 @@ export default function Commonplace() {
             as narrative style. On the one hand, I missed the military/poltical
             shenanigans of characters like Wu Yong and (especially) Zhuge Liang;
             on the other, I appreciated the psychological depth and literariness
-            of this later novel. [More thoughts to come.]
+            of this later novel. Xuequin (among others?) narrativizes time as
+            well as Tolstoy or Proust, and his rich portrayals of character
+            render moments that might otherwise reek of bathos (e.g., the
+            &quot;resolution&quot; of the love triangle between Bao Yu, Lin
+            Daiyu, and Bao Chai) powerful and affecting. This is the sort of
+            novel that reminds the reader what even the best short story cannot
+            do: in the final pages, one cannot help but remember, dream-like,
+            the full history of the tale and the consequent weight of its
+            ending.
           </p>
         </BookItem>
         <BookItem

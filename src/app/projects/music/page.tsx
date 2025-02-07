@@ -18,6 +18,11 @@ export default function Music() {
         individual music project pages. My hope is to upload scores (and maybe
         better recording quality) in the not-too-distant-future.
       </p>
+      <br />
+      <p>
+        EDIT: My hope is to upload <i>something</i>, <i>sometime</i>. Probably
+        the D-minor piece.
+      </p>
     </PageWrapper>
   );
 }
