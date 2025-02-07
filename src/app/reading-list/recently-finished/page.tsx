@@ -70,7 +70,7 @@ export default function Commonplace() {
             bizarreness.) Somewhat distracting is the panoply of sexy female
             ghosts and fox spirits visiting lonely sexless men that brings to
             mind terms like &quot;scopophilia&quot; and &quot;male gaze&quot;
-            and &quot;l&apos;écriture feminine&quot; etc.
+            and &quot;l&apos;écriture féminine&quot; etc.
           </p>
         </BookItem>
         <BookItem
