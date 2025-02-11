@@ -141,7 +141,7 @@ export default function Commonplace() {
           </p>
         </BookItem>
         <BookItem
-          title="The Real Lif of Sebastian Knight"
+          title="The Real Life of Sebastian Knight"
           authors={["Vladimir Nabokov"]}
           url="https://en.wikipedia.org/wiki/The_Real_Life_of_Sebastian_Knight"
           image="https://m.media-amazon.com/images/I/61ZSsdnPz0L._SL1006_.jpg"
