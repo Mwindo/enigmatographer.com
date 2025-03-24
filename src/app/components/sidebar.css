@@ -1,31 +1,31 @@
-.basic.tree {
+.sidebar.tree {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.basic .tree-node:focus {
+.sidebar .tree-node:focus {
   font-weight: bold;
 }
 
-.basic .tree-node,
-.basic .tree-node-group {
+.sidebar .tree-node,
+.sidebar .tree-node-group {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.basic .tree-branch-wrapper,
-.basic .tree-node__leaf {
+.sidebar .tree-branch-wrapper,
+.sidebar .tree-node__leaf {
   outline: none;
 }
 
-.basic .tree-node--focused {
+.sidebar .tree-node--focused {
   display: block;
   font-weight: bold;
 }
 
-.basic .tree-node--selected {
+.sidebar .tree-node--selected {
   /* outline-color: rgb(77, 144, 254);
     outline-style: auto;
     outline-width: 2px; */
@@ -33,16 +33,16 @@
   display: block;
 }
 
-.basic .tree-node__branch {
+.sidebar .tree-node__branch {
   display: block;
   padding: 0;
   text-decoration: underline;
 }
 
-.basic .tree-node:hover {
+.sidebar .tree-node:hover {
   background-color: rgb(43, 54, 61);
 }
 
-.basic .tree-node {
+.sidebar .tree-node {
   cursor: pointer;
 }

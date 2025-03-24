@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import TreeView, { NodeId, flattenTree } from "react-accessible-treeview";
 import "./sidebar.css";
 import { useRouter } from "next/navigation";
@@ -57,7 +57,7 @@ const getRouteForNode = (nodeName: string) => {
 };
 
 const getIDFromPath = (path: string): NodeId | undefined => {
-  return data.find((e) => "/" + e.name == path)?.id;
+  return data.find((e) => "/" + e.name === path)?.id;
 };
 
 const getParentPath = (path: string): NodeId[] | undefined => {
@@ -74,6 +74,19 @@ const SideBar = ({
   const router = useRouter();
   const selectedId = getIDFromPath(selectedPath || "");
 
+  // Create a ref for the tree container
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      // Query for the element with role="tree"
+      const treeEl = containerRef.current.querySelector('[role="tree"]');
+      if (treeEl) {
+        treeEl.setAttribute("tabIndex", "0");
+      }
+    }
+  }, []);
+
   return (
     <div>
       <div className={styles.close_container}>
@@ -81,19 +94,21 @@ const SideBar = ({
           ✖
         </button>
       </div>
-      <TreeView
-        data={data}
-        className="basic"
-        aria-label="basic example tree"
-        selectedIds={[selectedId] as NodeId[]}
-        expandedIds={selectedId ? getParentPath(selectedPath || "") : []}
-        onNodeSelect={(e) => router.push(getRouteForNode(e.element.name))}
-        nodeRenderer={({ element, getNodeProps, level, handleSelect }) => (
-          <div {...getNodeProps()} style={{ paddingLeft: 10 * (level - 1) }}>
-            {element.name.split("/").slice(-1)[0]}
-          </div>
-        )}
-      />
+      <div ref={containerRef}>
+        <TreeView
+          data={data}
+          className="sidebar"
+          aria-label="navigation sidebar"
+          selectedIds={[selectedId] as NodeId[]}
+          expandedIds={selectedId ? getParentPath(selectedPath || "") : []}
+          onNodeSelect={(e) => router.push(getRouteForNode(e.element.name))}
+          nodeRenderer={({ element, getNodeProps, level }) => (
+            <div {...getNodeProps()} style={{ paddingLeft: 10 * (level - 1) }}>
+              {element.name.split("/").slice(-1)[0]}
+            </div>
+          )}
+        />
+      </div>
     </div>
   );
 };

@@ -14,6 +14,136 @@ export default function Commonplace() {
     >
       <BookItemList>
         <BookItem
+          title="Today I Wrote Nothing: The Selected Writings of Daniil Kharms"
+          authors={["Daniil Kharms", "Matvei Yankelevich"]}
+          url="https://www.labyrinthbooks.com/today-i-wrote-nothing/"
+          image="https://m.media-amazon.com/images/I/41KM2PFfRUL._SY445_SX342_.jpg"
+        >
+          <p>
+            I decided to read this after encountering a few excerpts like the
+            following:
+            <br />
+            <br />
+            <i>
+              There was a red-haired man who had no eyes or ears. Neither did he
+              have any hair, so he was called red-haired theoretically. He
+              couldn't speak, since he didn't have a mouth. Neither did he have
+              a nose. He didn&apos;t even have any arms or legs. He had no
+              stomach and he had no back and he had no spine and he had no
+              innards whatsoever. He had nothing at all! Therefore there&apos;s
+              no knowing whom we are even talking about. In fact it&apos;s
+              better that we don&apos;t say any more about him.
+            </i>
+            <br />
+            <br />A fan of Carroll and Lear and nonsense more generally, I
+            thought this would be right up my alley. However, it did not{" "}
+            <i>quite</i> scratch the itch I expected, and I have mixed feelings
+            overall. You know those half-crazed sleep-deprived late-night
+            thoughts that you frantically scramble to write down (&quot;This is
+            important!&quot; or &quot;Hahaha oh man I don&apos;t want to forget
+            this!&quot;) but mystify you upon a morning re-read? This was, for
+            better and worse, my experience with reading Kharms. (My favorite
+            sketch was &quot;How I Was Visited By Messengers&quot;, which felt
+            like it transported me into a bizarre alternative pyschology.) Words
+            like &quot;Kafkaesque,&quot; &quot;
+            <a
+              href="https://en.wikipedia.org/wiki/Clinamen"
+              className={styles.link}
+              target="_blank"
+            >
+              clinamen
+            </a>
+            , &quot; &quot;tertium non quid,&quot;, &quot;
+            <a
+              href="https://en.wikipedia.org/wiki/Defamiliarization"
+              className={styles.link}
+              target="_blank"
+            >
+              defamiliarization
+            </a>
+            , &quot; etc. might be threaded into a more thorough review; I will
+            just say, &quot;It&apos;s weird and sometimes good fun, especially
+            after page 200 or so.&quot;
+          </p>
+        </BookItem>
+        <BookItem
+          title="Fables: Livres I à IV"
+          authors={["Jean de La Fontaine"]}
+          url="https://en.wikipedia.org/wiki/La_Fontaine%27s_Fables"
+          image="https://m.media-amazon.com/images/I/41bgP1oWKXL._SY445_SX342_.jpg"
+        >
+          <p>
+            Mildly entertaining, and sometimes surprisingly topical. I have
+            nothing noteworthy to say; this was mostly just a way to keep up on
+            French reading.
+          </p>
+        </BookItem>
+        <BookItem
+          title="The Slynx"
+          authors={["Tatyana Tolstaya", "Jamey Gambrell"]}
+          url="https://www.nyrb.com/products/the-slynx"
+          image="https://m.media-amazon.com/images/I/812IXlwtBaL._SL1500_.jpg"
+        >
+          <p>
+            A well-witten and humorous take on post-apocalyptic society, the
+            paradoxical devaluation and idolization of books, and the grotesque
+            vagaries of settling into family life, such as it is.
+          </p>
+        </BookItem>
+        <BookItem
+          title="Journey to the West"
+          authors={["Wu Cheng'en", "Anthony C. Wu"]}
+          url="https://en.wikipedia.org/wiki/Journey_to_the_West"
+          image="https://m.media-amazon.com/images/I/51LEzjWaY5L._SY445_SX342_.jpg"
+        >
+          <p>
+            I have been reading the four Classic Chinese Novels (in
+            translation). This is perhaps the zaniest of the four: after a
+            prelude introducing Sun Wukong and then Tripitaka, it enters into a
+            series of episodes involving demons and Buddhist/Daoist magic as the
+            protagonists make their way to the Thunderclap Monastery in the
+            West. As well as any other, this novel embodies Bakhtin&apos;s
+            chronotope of the road. While fun, the umpteenth time Tripitaka (and
+            sometimes friends) is captured or else in danger of capture and
+            relying on the wiles of Pilgrim Sun and sometimes the power of other
+            Celestials to save him which often involve the poetic narration of
+            battles cast in the same poetic narration as all those previous
+            battles (one is reminded of the similarly indistinguishable
+            skirmishes in chivalric romance of &quot;passing fair knights&quot;
+            who fight for hours or the ironically mundane &quot;it was even{" "}
+            <i>more</i> more beautiful than before&quot; passages in
+            Dante&apos;s <i>Paradiso</i>) that often describe magic artifacts
+            and histories you have read several times already while ... can
+            become tedious, even if there are (apparently--here I trust Wu and
+            his endnotes) allegorical meanings underpinning much of the text.
+          </p>
+        </BookItem>
+        <BookItem
+          title="La Société du spectacle"
+          authors={["Guy Debord"]}
+          url="https://en.wikipedia.org/wiki/The_Society_of_the_Spectacle"
+          image="https://m.media-amazon.com/images/I/31xW2W477kL._SY445_SX342_.jpg"
+        >
+          <p>
+            Debord&apos;s main aim is to extend Marx&apos;s concept of the
+            alienation of labor: we are alienated from reality itself, he
+            argues, because capitalism finds its highest (lowest?) expression in
+            serving us a self-perpetuating system of fragmented images. We
+            interact not with reality, and not with each other, because our
+            experiences and social lives are mediated through images. In some
+            ways prescient, in some ways questionable (how much have our lives{" "}
+            <i>always</i> been shaped by &quot;images&quot;, like parables,
+            anecdotes, tall tales?), it is regardless an interesting read. There
+            is a certain poetics of absence that characterizes a good deal of
+            French--and Marxist--philosophy and critical theory. (I am thinking
+            of the empty signifiers or <i>objet petit a</i> in Lacan, the{" "}
+            <i>différance</i> and erasure of Derrida, the shiftiness of an
+            &quot;author&quot; in Foucault, the death of the author of Barthes,
+            the simulacra of Baudrillard, etc.) Debord, I think, fits in this
+            sometimes profound, sometimes infuriating tradition.
+          </p>
+        </BookItem>
+        <BookItem
           title="The Hearing Trumpet"
           authors={["Leonora Carrington"]}
           url="https://en.wikipedia.org/wiki/The_Hearing_Trumpet"

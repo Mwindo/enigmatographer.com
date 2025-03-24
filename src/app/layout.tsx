@@ -4,12 +4,13 @@ import "./globals.css";
 import PageLayout from "./pagelayout";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Head from "next/head";
 
 const mainFont = Titillium_Web({
   subsets: ["latin"],
   variable: "--font-main",
   display: "swap",
-  weight: ['200', '600'],
+  weight: ["200", "600"],
 });
 
 export const metadata: Metadata = {
@@ -24,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="UTF-8" />
+      </Head>
       <Suspense fallback={<Loading />}>
         <body id="body" className={mainFont.className}>
           <PageLayout>{children}</PageLayout>
