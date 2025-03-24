@@ -27,12 +27,12 @@ export default function Commonplace() {
             <i>
               There was a red-haired man who had no eyes or ears. Neither did he
               have any hair, so he was called red-haired theoretically. He
-              couldn't speak, since he didn't have a mouth. Neither did he have
-              a nose. He didn&apos;t even have any arms or legs. He had no
-              stomach and he had no back and he had no spine and he had no
-              innards whatsoever. He had nothing at all! Therefore there&apos;s
-              no knowing whom we are even talking about. In fact it&apos;s
-              better that we don&apos;t say any more about him.
+              couldn&apos;t speak, since he didn&apos;t have a mouth. Neither
+              did he have a nose. He didn&apos;t even have any arms or legs. He
+              had no stomach and he had no back and he had no spine and he had
+              no innards whatsoever. He had nothing at all! Therefore
+              there&apos;s no knowing whom we are even talking about. In fact
+              it&apos;s better that we don&apos;t say any more about him.
             </i>
             <br />
             <br />A fan of Carroll and Lear and nonsense more generally, I
