@@ -38,7 +38,7 @@ export default function Commonplace() {
         </BookItem>
         <BookItem
           title="Cyrano de Bergerac"
-          authors={["Edmond Rostan"]}
+          authors={["Edmond Rostand"]}
           url="https://en.wikipedia.org/wiki/Cyrano_de_Bergerac_(play)"
           image="https://m.media-amazon.com/images/I/8143TWFmsPL._SY522_.jpg"
         >
