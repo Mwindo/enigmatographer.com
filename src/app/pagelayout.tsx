@@ -24,6 +24,24 @@ export const headerFont = localFont({
   variable: "--font-lansbury",
 });
 
+const firstNamePermutations: string[] = [
+  "First Name",
+  "rehpotsirhC",
+  "A work in progress",
+  "Curioser",
+  "Bibliophilic",
+  "Darth Kris",
+  "Relatively Turing Complete",
+  "Homo Ludens",
+];
+const lastNamePermutations: string[] = [
+  "Last Name",
+  "(Etymology unknown)",
+  "mosiB",
+  "Schmistopher",
+  "Robin",
+];
+
 // TODO: Refactor so that these values are DRYer; right now, they appear in multiple places
 const DRAG_BAR_WIDTH = 6;
 const SIDEBAR_BREAKPOINT = 600;
@@ -116,24 +134,6 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
   };
 
   const location = usePathname();
-
-  const firstNamePermutations: string[] = [
-    "First Name",
-    "rehpotsirhC",
-    "A work in progress",
-    "Curioser",
-    "Bibliophilic",
-    "Darth Kris",
-    "Relatively Turing Complete",
-    "Homo Ludens",
-  ];
-  const lastNamePermutations: string[] = [
-    "Last Name",
-    "(Etymology unknown)",
-    "mosiB",
-    "Schmistopher",
-    "Robin",
-  ];
 
   return (
     <main id="main" className={styles.main}>

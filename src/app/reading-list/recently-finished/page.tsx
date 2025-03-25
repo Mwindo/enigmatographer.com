@@ -53,7 +53,7 @@ export default function Commonplace() {
             >
               clinamen
             </a>
-            , &quot; &quot;tertium non quid,&quot;, &quot;
+            ,&quot; &quot;tertium non quid,&quot; &quot;
             <a
               href="https://en.wikipedia.org/wiki/Defamiliarization"
               className={styles.link}
@@ -61,7 +61,7 @@ export default function Commonplace() {
             >
               defamiliarization
             </a>
-            , &quot; etc. might be threaded into a more thorough review; I will
+            ,&quot; etc. might be threaded into a more thorough review; I will
             just say, &quot;It&apos;s weird and sometimes good fun, especially
             after page 200 or so.&quot;
           </p>
