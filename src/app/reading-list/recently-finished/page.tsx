@@ -261,7 +261,7 @@ export default function Commonplace() {
             >
               &quot;meaning degree zero&quot;
             </a>
-            ), full of brilliant images and thoughtful scenarios, a paeon to the
+            ), full of ingenious images and thoughtful scenarios, a paeon to the
             the way that rhetoric grapples with and structures reality (through
             paradox, antithesis, etc.). Pavić offers two different ways to read
             the novel: in &quot;page-order,&quot; or in &quot;crossword&quot;

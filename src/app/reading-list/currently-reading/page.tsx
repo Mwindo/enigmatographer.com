@@ -14,6 +14,21 @@ export default function Commonplace() {
     >
       <BookItemList>
         <BookItem
+          title="Noctes Atticae"
+          authors={["Aulus Gellius"]}
+          url="https://en.wikipedia.org/wiki/Aulus_Gellius"
+          image="https://m.media-amazon.com/images/I/41-CnlGaUiL._SY445_SX342_.jpg"
+        >
+          <p>
+            I am a fan of anecdotes, miscellanies, and compendiums in the
+            tradition of Pliny the Elder, Athenaeus, Plutarch, etc., and I have
+            been meaning to read the Attic Nights for a while. I recently found
+            all three volumes of the Loeb edition at a steal and am making my
+            way through slowly, mostly in English but with some dusting of Latin
+            to brush up.
+          </p>
+        </BookItem>
+        <BookItem
           title="The Origins of Totalitarianism"
           authors={["Hannah Arendt"]}
           url="https://en.wikipedia.org/wiki/The_Origins_of_Totalitarianism"
