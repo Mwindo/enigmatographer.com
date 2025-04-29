@@ -4,6 +4,7 @@ import styles from "./pagelayout.module.css";
 import {
   MouseEvent,
   ReactNode,
+  Suspense,
   TouchEvent,
   useCallback,
   useEffect,
@@ -17,6 +18,7 @@ import ResponsiveText from "./components/ResponsiveText";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import localFont from "next/font/local";
+import Loading from "./loading";
 
 // TODO: Move this somewhere reasonable
 export const headerFont = localFont({
@@ -191,7 +193,7 @@ export default function PageLayout({ children }: { children?: ReactNode }) {
           onClick={() => handleMainContentClicked()}
           className={styles.right_panel_main}
         >
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
         </div>
         <div className={styles.footer}>
           <a href="https://github.com/Mwindo" target="_blank">
