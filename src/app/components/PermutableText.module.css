@@ -1,3 +1,4 @@
 .permutable_text_container {
-    cursor: pointer;
+  cursor: pointer;
+  user-select: none;
 }
